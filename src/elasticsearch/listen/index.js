@@ -11,16 +11,17 @@ async function exec(obj) {
   const { method, id, data, collection } = obj;
   switch (method) {
     case "insert":
+      console.log("INSERT", id);
       bulk.push({ index: { _index: collection, _type: collection, _id: id } });
       bulk.push({ doc: data, doc_as_upsert: true });
       break;
     case "update":
-      console.log("UPDATE", data);
-      delete data._id;
+      console.log("UPDATE", id);
       bulk.push({ update: { _index: collection, _type: collection, _id: id } });
       bulk.push({ doc: data, doc_as_upsert: true });
       break;
     case "delete":
+      console.log("DELETE", id);
       bulk.push({ delete: { _index: collection, _type: collection, _id: id } });
       break;
     default:
