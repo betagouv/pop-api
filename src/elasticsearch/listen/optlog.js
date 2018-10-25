@@ -1,7 +1,6 @@
 var MongoOplog = require("mongo-oplog");
 
-const mongoUrl =
-  "mongodb://oploguser:OFXUsS33xC8sDxrQ@staging-shard-00-00-fkthi.mongodb.net:27017,staging-shard-00-01-fkthi.mongodb.net:27017,staging-shard-00-02-fkthi.mongodb.net:27017/local?ssl=true&replicaSet=Staging-shard-0&authSource=admin";
+const mongoUrl = process.env.MONGO_DB;
 
 class OPTLOG {
   constructor(callback, mongoUrl, collection) {
@@ -21,9 +20,7 @@ class OPTLOG {
       // console.log(obj);
     });
     this.oplog.on("update", doc => {
-      console.log("DATA", doc);
       const obj = convert(doc, "update");
-      console.log("DATA", obj);
       if (this.callback) {
         this.callback(obj);
       }
