@@ -4,11 +4,12 @@ const bcrypt = require("bcrypt");
 
 const ImportSchema = new Schema({
   user: { type: mongoose.Schema.ObjectId, ref: "user" },
-  importedAt: { type: Date },
+  importedAt: { type: Date, default: Date.now() },
+  institution: String,
   created: Number,
   updated: Number,
-  delete: Number,
-  unChange: Number
+  rejected: Number,
+  unChanged: Number
 });
 
 module.exports = mongoose.model("Import", ImportSchema);

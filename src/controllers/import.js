@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
 const { capture } = require("../sentry.js");
 
 const Import = require("../models/import");
@@ -8,11 +10,13 @@ const Import = require("../models/import");
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
+  upload.any(),
   (req, res) => {
-    const body = JSON.parse(req.body);
+    console.log(req.body);
+    const body = JSON.parse(req.body.import);
     const obj = new Import(body);
-    obj.save().then(e => {
-      res.send({ success: true, msg: "OK" });
+    obj.save().then(doc => {
+      res.send({ success: true, msg: "OK", doc });
     });
   }
 );
