@@ -12,7 +12,6 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   upload.any(),
   (req, res) => {
-    console.log(req.body);
     const body = JSON.parse(req.body.import);
     const obj = new Import(body);
     obj.save().then(doc => {
@@ -25,6 +24,7 @@ router.get(
   "/",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
+    let imports = null;
     try {
       imports = await Import.find({});
     } catch (e) {
