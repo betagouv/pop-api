@@ -62,7 +62,7 @@ jobs:
 
 workflows:
   version: 2.1
-  test-then-deploy:
+  ci_cd:
     jobs:
       - build
       - test:
