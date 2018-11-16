@@ -4,7 +4,7 @@ commands:
   restore_node_modules:
     steps:
       - restore_cache:
-        keys: v1-dependencies-{{ checksum "package-lock.json" }}
+          keys: v1-dependencies-{{ checksum "package-lock.json" }}
   save_node_modules:
     steps:
       - save_cache:
