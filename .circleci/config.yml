@@ -4,13 +4,13 @@ commands:
   restore_node_modules:
     steps:
       - restore_cache:
-          keys: v1-dependencies-{{ checksum "package-lock.json" }}
+          keys: v1-dependencies-{{ checksum "yarn.lock" }}
   save_node_modules:
     steps:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
   configure_aws_ebcli:
     steps:
       - run: sudo pip install awsebcli
