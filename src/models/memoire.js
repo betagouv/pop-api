@@ -11,12 +11,12 @@ const Schema = new mongoose.Schema(
         description:
           "\
       Producteur de la donnée déterminé grâce à la référence : \
-      IV : INV\
-      OA : CAOA\
-      MH : CRMH\
-      AR : ARCH\
-      AP : SDAP\
-      Autre : SAP",
+      IV=INV\
+      OA=CAOA\
+      MH=CRMH\
+      AR=ARCH\
+      AP=SDAP\
+      Autre=SAP",
         master: true
       }
     },
