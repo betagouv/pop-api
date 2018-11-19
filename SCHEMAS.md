@@ -2,13 +2,13 @@
 ## Import
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
-|user|ObjectID|false|false|false||
-|importedAt|Date|false|false|false||
-|institution|String|false|false|false||
-|created|Number|false|false|false||
-|updated|Number|false|false|false||
-|rejected|Number|false|false|false||
-|unChanged|Number|false|false|false||
+|user|ObjectID|false|false|false|Identifiant de l'utilisateur à l'origine de l'import|
+|importedAt|Date|false|false|false|Date de l'import |
+|institution|String|false|false|false|Institution à l'origine de l'import|
+|created|Number|false|false|false|Nombre de notices créées lors de l'import|
+|updated|Number|false|false|false|Nombre de notices mises à jour lors de l'import|
+|rejected|Number|false|false|false|Nombre de notices rejetées lors de l'import|
+|unChanged|Number|false|false|false|Nombre de notices non mises à jour lors de l'import|
 |_id|ObjectID|false|false|false||
 |__v|Number|false|false|false||
 ## Joconde
