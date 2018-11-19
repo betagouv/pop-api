@@ -8,14 +8,15 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: `
-      Producteur de la donnée déterminé grâce à la référence : 
-      IV : INV
-      OA : CAOA
-      MH : CRMH
-      AR : ARCH
-      AP : SDAP
-      Autre : SAP`,
+        description:
+          "\
+      Producteur de la donnée déterminé grâce à la référence : \
+      IV : INV\
+      OA : CAOA\
+      MH : CRMH\
+      AR : ARCH\
+      AP : SDAP\
+      Autre : SAP",
         master: true
       }
     },
