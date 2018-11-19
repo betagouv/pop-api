@@ -10,36 +10,46 @@ const Schema = new mongoose.Schema(
       unique: true,
       index: true,
       trim: true,
-      description: "Référence unique de la notice",
-      master: "false"
+      documentation: {
+        description: "Référence unique de la notice",
+        master: false
+      }
     },
     PRODUCTEUR: { type: String, default: "" },
     BASE: {
       type: String,
       default: "Patrimoine architectural (Mérimée)",
-      description: "Nom de la base : Patrimoine architectural (Mérimée)",
-      master: "true"
+      documentation: {
+        description: "Nom de la base : Patrimoine architectural (Mérimée)",
+        master: true
+      }
     },
     CONTIENT_IMAGE: {
       type: String,
       default: "",
-      description:
-        "Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES",
-      master: "true"
+      documentation: {
+        description:
+          "Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES",
+        master: true
+      }
     },
     MEMOIRE: [{ ref: String, url: String }],
     POP_COORDONNEES: {
       lat: {
         type: Number,
         default: 0,
-        description: "Latitude de la notice en WGS84",
-        master: "true"
+        documentation: {
+          description: "Latitude de la notice en WGS84",
+          master: true
+        }
       },
       lon: {
         type: Number,
         default: 0,
-        description: "Longitude de la notice en WGS84",
-        master: "true"
+        documentation: {
+          description: "Longitude de la notice en WGS84",
+          master: true
+        }
       }
     },
     POP_CONTIENT_GEOLOCALISATION: {
@@ -82,14 +92,18 @@ const Schema = new mongoose.Schema(
     DMAJ: {
       type: String,
       default: "",
-      description: "Date de la dernière mise à jour",
-      master: "true"
+      documentation: {
+        description: "Date de la dernière mise à jour",
+        master: true
+      }
     },
     DMIS: {
       type: String,
       default: "",
-      description: "Date de la création POP/Mistral",
-      master: "true"
+      documentation: {
+        description: "Date de la création POP/Mistral",
+        master: true
+      }
     },
     DOSS: { type: String, default: "" },
     DPRO: { type: String, default: "" },
