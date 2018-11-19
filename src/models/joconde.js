@@ -10,32 +10,32 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "MUSEE",
       description: "Producteur de la donnée",
-      master: true
+      master: "true"
     },
     BASE: {
       type: String,
       default: "Collections des musées de France (Joconde)",
       description: "Nom de la base",
-      master: true
+      master: "true"
     },
     CONTIENT_IMAGE: {
       type: String,
       default: "",
       description: "Champ permettant",
-      master: true
+      master: "true"
     },
     POP_COORDONNEES: {
       lat: {
         type: Number,
         default: 0,
         description: "Latitude de la notice en WGS84",
-        master: true
+        master: "true"
       },
       lon: {
         type: Number,
         default: 0,
         description: "Longitude de la notice en WGS84",
-        master: true
+        master: "true"
       }
     },
     REF: {
@@ -44,7 +44,7 @@ const Schema = new mongoose.Schema(
       index: true,
       trim: true,
       description: "Référence unique de la notice",
-      master: false
+      master: "false"
     },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],
     REFMIS: {
