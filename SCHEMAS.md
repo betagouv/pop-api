@@ -103,14 +103,7 @@
 ## Memoire
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
-|PRODUCTEUR|String|false|true|false|
-      Producteur de la donnée déterminé grâce à la référence : 
-      IV : INV
-      OA : CAOA
-      MH : CRMH
-      AR : ARCH
-      AP : SDAP
-      Autre : SAP|
+|PRODUCTEUR|String|false|true|false|      Producteur de la donnée déterminé grâce à la référence :       IV : INV      OA : CAOA      MH : CRMH      AR : ARCH      AP : SDAP      Autre : SAP|
 |BASE|String|false|true|false|Nom de la base : Photographies (Mémoire)|
 |CONTIENT_IMAGE|String|false|true|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
 |POP_IMPORT|Array|false|false|false||
