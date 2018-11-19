@@ -40,8 +40,18 @@ const Schema = new mongoose.Schema(
     SERIE: { type: String, default: "" },
     THEATRE: { type: String, default: "" },
     TITRE: { type: String, default: "" },
-    DMAJ: { type: String, default: "" },
-    DMIS: { type: String, default: "" },
+    DMAJ: {
+      type: String,
+      default: "",
+      description: "Date de la dernière mise à jour",
+      master: "true"
+    },
+    DMIS: {
+      type: String,
+      default: "",
+      description: "Date de la création POP/Mistral",
+      master: "true"
+    },
     IDPROD: { type: String, default: "" },
     NUMCD: { type: String, default: "" },
     NUMF: { type: String, default: "" },

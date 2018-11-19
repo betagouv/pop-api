@@ -49,8 +49,18 @@ const Schema = new mongoose.Schema(
     DEPL: { type: String, default: "" },
     DESC: { type: String, default: "" },
     DIMS: { type: String, default: "" },
-    DMAJ: { type: String, default: "", es_type: "keyword" }, // The format of date is not a date object everywhere. I cant translate it to date without a deepclean
-    DMIS: { type: String, default: "", es_type: "keyword" }, // The format of date is not a date object everywhere. I cant translate it to date without a deepclean
+    DMAJ: {
+      type: String,
+      default: "",
+      description: "Date de la dernière mise à jour",
+      master: "true"
+    },
+    DMIS: {
+      type: String,
+      default: "",
+      description: "Date de la création POP/Mistral",
+      master: "true"
+    },
     DOMN: { type: String, default: "" },
     DOSADRS: { type: String, default: "" },
     DOSS: { type: [String], default: [] },

@@ -215,7 +215,7 @@ const Schema = new mongoose.Schema(
     ECOL: {
       type: [String],
       default: [],
-      description: "",
+      description: "Ecole ",
       master: "false"
     },
     EPOQ: {

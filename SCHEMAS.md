@@ -47,7 +47,7 @@
 |DMIS|String|false|false|false|Date de la création POP/Mistral|
 |DOMN|Array|false|false|false|Domaine (catégorie du bien) |
 |DREP|String|false|false|false|Date de la représentation|
-|ECOL|Array|false|false|false||
+|ECOL|Array|false|false|false|Ecole |
 |EPOQ|Array|false|false|false|Epoque /style / mouvement |
 |ETAT|Array|false|false|false|[surement à nettoyer] Etat du bien. C'est une liste finie de valeurs possibles|
 |EXPO|String|false|false|false|Exposition |
@@ -139,8 +139,8 @@
 |SERIE|String|false|false|false||
 |THEATRE|String|false|false|false||
 |TITRE|String|false|false|false||
-|DMAJ|String|false|false|false||
-|DMIS|String|false|false|false||
+|DMAJ|String|false|false|false|Date de la dernière mise à jour|
+|DMIS|String|false|false|false|Date de la création POP/Mistral|
 |IDPROD|String|false|false|false||
 |NUMCD|String|false|false|false||
 |NUMF|String|false|false|false||
@@ -267,8 +267,8 @@
 |DEPL|String|false|false|false||
 |DESC|String|false|false|false||
 |DIMS|String|false|false|false||
-|DMAJ|String|false|false|false||
-|DMIS|String|false|false|false||
+|DMAJ|String|false|false|false|Date de la dernière mise à jour|
+|DMIS|String|false|false|false|Date de la création POP/Mistral|
 |DOSS|String|false|false|false||
 |DPRO|String|false|false|false||
 |DPT|String|false|false|false||
@@ -407,8 +407,8 @@
 |REPR|String|false|false|false||
 |SREP|String|false|false|false||
 |REFIM|String|false|false|false||
-|DMAJ|String|false|false|false||
-|DMIS|String|false|false|false||
+|DMAJ|String|false|false|false|Date de la dernière mise à jour|
+|DMIS|String|false|false|false|Date de la création POP/Mistral|
 |AFFE|String|false|false|false||
 |NUMS|String|false|false|false||
 |SUITE|String|false|false|false||
@@ -533,8 +533,8 @@
 |DEPL|String|false|false|false||
 |DESC|String|false|false|false||
 |DIMS|String|false|false|false||
-|DMAJ|String|false|false|false||
-|DMIS|String|false|false|false||
+|DMAJ|String|false|false|false|Date de la dernière mise à jour|
+|DMIS|String|false|false|false|Date de la création POP/Mistral|
 |DOMN|String|false|false|false||
 |DOSADRS|String|false|false|false||
 |DOSS|Array|false|false|false||

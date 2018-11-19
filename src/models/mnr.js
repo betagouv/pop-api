@@ -6,7 +6,10 @@ var getElasticInstance = require("../elasticsearch");
 const Schema = new mongoose.Schema(
   {
     PRODUCTEUR: { type: String, default: "MNR" },
-    BASE: { type: String, default: "Récupération artistique (MNR Rose-Valland)" },
+    BASE: {
+      type: String,
+      default: "Récupération artistique (MNR Rose-Valland)"
+    },
     CONTIENT_IMAGE: { type: String, default: "non" },
     REF: { type: String, unique: true, index: true, trim: true },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],
@@ -54,8 +57,18 @@ const Schema = new mongoose.Schema(
     REPR: { type: String, default: "" },
     SREP: { type: String, default: "" },
     REFIM: { type: String, default: "" },
-    DMAJ: { type: String, default: "" },
-    DMIS: { type: String, default: "" },
+    DMAJ: {
+      type: String,
+      default: "",
+      description: "Date de la dernière mise à jour",
+      master: "true"
+    },
+    DMIS: {
+      type: String,
+      default: "",
+      description: "Date de la création POP/Mistral",
+      master: "true"
+    },
     AFFE: { type: String, default: "" },
     NUMS: { type: String, default: "" },
     SUITE: { type: String, default: "" },
