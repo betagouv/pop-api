@@ -16,88 +16,88 @@
 |----|----|--------|------|--------|-----------|
 |PRODUCTEUR|String|false|false|false|Producteur de la donnée|
 |BASE|String|false|false|false|Nom de la base|
-|CONTIENT_IMAGE|String|false|false|false|Champ permettant|
+|CONTIENT_IMAGE|String|false|false|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
 |POP_COORDONNEES.lat|Number|false|false|false|Latitude de la notice en WGS84|
 |POP_COORDONNEES.lon|Number|false|false|false|Longitude de la notice en WGS84|
 |REF|String|false|false|false|Référence unique de la notice|
 |POP_IMPORT|Array|false|false|false||
 |REFMIS|String|false|false|false|Référence de mise à jour (marque de la modification de la notice)|
-|ADPT|Array|false|false|false||
-|APPL|Array|false|false|false||
-|APTN|String|false|false|false||
-|ATTR|String|false|false|false||
-|AUTR|String|false|false|false||
-|BIBL|String|false|false|false||
-|COMM|String|false|false|false||
-|CONTACT|String|false|false|false||
-|COOR|String|false|false|false||
-|COPY|String|false|false|false||
-|DACQ|String|false|false|false||
-|DATA|String|false|false|false||
-|DATION|String|false|false|false||
-|DDPT|String|false|false|false||
-|DECV|String|false|false|false||
-|DENO|Array|false|false|false||
-|DEPO|String|false|false|false||
-|DESC|String|false|false|false||
-|DESY|String|false|false|false||
-|DIFFU|String|false|false|false||
-|DIMS|String|false|false|false||
-|DMAJ|String|false|false|false||
-|DMIS|String|false|false|false||
-|DOMN|Array|false|false|false||
-|DREP|String|false|false|false||
+|ADPT|Array|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation] Ancien dépôt / changement d’affectation|
+|APPL|Array|false|false|false|Appellation|
+|APTN|String|false|false|false|Ancienne appartenance (nom du donateur / testateur/ vendeur) |
+|ATTR|String|false|false|false|Anciennes attributions|
+|AUTR|String|false|false|false|Auteur /exécutant / collecteur|
+|BIBL|String|false|false|false|Bibliographie|
+|COMM|String|false|false|false|Commentaires|
+|CONTACT|String|false|false|false|Lien contact musée|
+|COOR|String|false|false|false|Coordinateur|
+|COPY|String|false|false|false|Copyright notice|
+|DACQ|String|false|false|false|Date d’acquisition|
+|DATA|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]  |
+|DATION|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]  |
+|DDPT|String|false|false|false|Date de dépôt / changement d’affectation|
+|DECV|String|false|false|false|Découverte / collecte / récolte (lieu de découverte / collecte / récolte) ; Type de site ; Méthode de découverte /collecte / récolte ; Date de découverte / collecte / récolte ; Découvreur / collecteur) |
+|DENO|Array|false|false|false|Dénomination du bien|
+|DEPO|String|false|false|false|Dépôt / établissement dépositaire|
+|DESC|String|false|false|false|Description |
+|DESY|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|DIFFU|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|DIMS|String|false|false|false|Mesures  / Dimensions|
+|DMAJ|String|false|false|false|Date de la dernière mise à jour|
+|DMIS|String|false|false|false|Date de la création POP/Mistral|
+|DOMN|Array|false|false|false|Domaine (catégorie du bien) |
+|DREP|String|false|false|false|Date de la représentation|
 |ECOL|Array|false|false|false||
-|EPOQ|Array|false|false|false||
-|ETAT|Array|false|false|false||
-|EXPO|String|false|false|false||
-|GENE|Array|false|false|false||
-|GEOHI|Array|false|false|false||
-|HIST|String|false|false|false||
-|IMAGE|String|false|false|false||
-|IMG|Array|false|false|false||
-|INSC|Array|false|false|false||
-|INV|String|false|false|false||
-|LABEL|String|false|false|false||
-|LABO|String|false|false|false||
-|LARC|String|false|false|false||
-|LIEUX|String|false|false|false||
-|LOCA|String|false|false|false||
-|LOCA2|String|false|false|false||
-|LOCA3|String|false|false|false||
-|MILL|Array|false|false|false||
-|MILU|String|false|false|false||
-|MOSA|String|false|false|false||
-|MSGCOM|String|false|false|false||
-|MUSEO|String|false|false|false||
-|NSDA|String|false|false|false||
-|ONOM|Array|false|false|false||
-|PAUT|String|false|false|false||
-|PDAT|String|false|false|false||
-|PDEC|String|false|false|false||
-|PEOC|Array|false|false|false||
-|PERI|Array|false|false|false||
-|PERU|Array|false|false|false||
-|PHOT|String|false|false|false||
-|PINS|String|false|false|false||
-|PLIEUX|String|false|false|false||
-|PREP|Array|false|false|false||
-|PUTI|String|false|false|false||
-|RANG|String|false|false|false||
-|REDA|Array|false|false|false||
-|REFIM|String|false|false|false||
-|REPR|String|false|false|false||
-|RETIF|String|false|false|false||
-|SREP|Array|false|false|false||
-|STAT|Array|false|false|false||
-|TECH|Array|false|false|false||
-|TICO|String|false|false|false||
-|TITR|String|false|false|false||
-|TOUT|String|false|false|false||
-|UTIL|Array|false|false|false||
-|VIDEO|Array|false|false|false||
-|WWW|String|false|false|false||
-|LVID|String|false|false|false||
+|EPOQ|Array|false|false|false|Epoque /style / mouvement |
+|ETAT|Array|false|false|false|[surement à nettoyer] Etat du bien. C'est une liste finie de valeurs possibles|
+|EXPO|String|false|false|false|Exposition |
+|GENE|Array|false|false|false|Genèse |
+|GEOHI|Array|false|false|false|Géographie historique|
+|HIST|String|false|false|false|Historique – Objets associés |
+|IMAGE|String|false|false|false|[Je ne sais pas à quoi ce champ sert]  |
+|IMG|Array|false|false|false|Contient les images. Le plus souvent généré grâce à REFIM|
+|INSC|Array|false|false|false|Inscriptions |
+|INV|String|false|false|false|N°Inventaire, ancien(s) numéros(s), autres numéros, N° de dépôt|
+|LABEL|String|false|false|false|Appellation musée de France : logo : Champs ayant toujours la valeur 'Musée de France au sens de la loi n°2002-5 du 4 janvier 2002'|
+|LABO|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|LARC|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|LIEUX|String|false|false|false|Lieu de création / d’exécution / d’utilisation|
+|LOCA|String|false|false|false|Localisation|
+|LOCA2|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|LOCA3|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|MILL|Array|false|false|false|Millésime de création / exécution |
+|MILU|String|false|false|false|Millésime d’utilisation |
+|MOSA|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|MSGCOM|String|false|false|false|[Surement à nettoyer. J'ai vu du code dans ce champ] Lien commande de reproduction et/ou de conditions d’utilisation |
+|MUSEO|String|false|false|false|Lien Numéro MUSEOFILE|
+|NSDA|String|false|false|false|Numéro de site|
+|ONOM|Array|false|false|false|Onomastique|
+|PAUT|String|false|false|false|Précisions /auteur / exécutant / collecteur|
+|PDAT|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation]|
+|PDEC|String|false|false|false|Précisions sur la découverte / collecte / récolte|
+|PEOC|Array|false|false|false|Période de l’original copié|
+|PERI|Array|false|false|false|Période de création / exécution |
+|PERU|Array|false|false|false|Période d’utilisation|
+|PHOT|String|false|false|false|Crédits photographiques|
+|PINS|String|false|false|false|Précisions sur les inscriptions|
+|PLIEUX|String|false|false|false|Précisions sur le lieu de création/ d’exécution / d’utilisation|
+|PREP|Array|false|false|false|Précisions sur le sujet représenté |
+|PUTI|String|false|false|false|Précisions sur l’utilisation |
+|RANG|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation] |
+|REDA|Array|false|false|false|Rédacteur |
+|REFIM|String|false|false|false|Référence image : lien texte/ image : C'est un code qui permet de retrouver l'url de l'image|
+|REPR|String|false|false|false|Sujet représenté |
+|RETIF|String|false|false|false|[Peut être déprécié : Pas affiché en production ni en consultation] |
+|SREP|Array|false|false|false|Source de la représentation|
+|STAT|Array|false|false|false|Statut juridique (type de propriété ; mode d’acquisition ; institution propriétaire (ville quand la commune est propriétaire) ; établissement affectataire|
+|TECH|Array|false|false|false|Matériaux et techniques|
+|TICO|String|false|false|false|[Peut être déprécié : A vérifier. Non présent en production] |
+|TITR|String|false|false|false|Titre de l'oeuvre |
+|TOUT|String|false|false|false|[Peut être déprécié : A vérifier. Non présent en production] |
+|UTIL|Array|false|false|false|Utilisation / Destination|
+|VIDEO|Array|false|false|false|[Peut être déprécié : A vérifier]|
+|WWW|String|false|false|false|Lien site associé / site complémentaire|
+|LVID|String|false|false|false|Lien video|
 |_id|ObjectID|false|false|false||
 |__v|Number|false|false|false||
 ## Memoire
