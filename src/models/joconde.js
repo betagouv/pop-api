@@ -15,7 +15,7 @@ const Schema = new mongoose.Schema(
     BASE: {
       type: String,
       default: "Collections des musées de France (Joconde)",
-      description: "Nom de la base",
+      description: "Nom de la base : Collections des musées de France (Joconde)",
       master: "true"
     },
     CONTIENT_IMAGE: {

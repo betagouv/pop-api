@@ -15,7 +15,7 @@
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
 |PRODUCTEUR|String|false|false|false|Producteur de la donnée|
-|BASE|String|false|false|false|Nom de la base|
+|BASE|String|false|false|false|Nom de la base : Collections des musées de France (Joconde)|
 |CONTIENT_IMAGE|String|false|false|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
 |POP_COORDONNEES.lat|Number|false|false|false|Latitude de la notice en WGS84|
 |POP_COORDONNEES.lon|Number|false|false|false|Longitude de la notice en WGS84|
@@ -104,10 +104,10 @@
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
 |PRODUCTEUR|String|false|false|false||
-|BASE|String|false|false|false||
-|CONTIENT_IMAGE|String|false|false|false||
+|BASE|String|false|false|false|Nom de la base : Photographies (Mémoire)|
+|CONTIENT_IMAGE|String|false|false|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
 |POP_IMPORT|Array|false|false|false||
-|REF|String|false|false|false||
+|REF|String|false|false|false|Référence unique de la notice|
 |TOUT|String|false|false|false||
 |ADRESSE|String|false|false|false||
 |AUTOEU|String|false|false|false||
@@ -229,13 +229,13 @@
 ## Merimee
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
-|REF|String|false|false|false||
+|REF|String|false|false|false|Référence unique de la notice|
 |PRODUCTEUR|String|false|false|false||
-|BASE|String|false|false|false||
-|CONTIENT_IMAGE|String|false|false|false||
+|BASE|String|false|false|false|Nom de la base : Patrimoine architectural (Mérimée)|
+|CONTIENT_IMAGE|String|false|false|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
 |MEMOIRE|Array|false|false|false||
-|POP_COORDONNEES.lat|Number|false|false|false||
-|POP_COORDONNEES.lon|Number|false|false|false||
+|POP_COORDONNEES.lat|Number|false|false|false|Latitude de la notice en WGS84|
+|POP_COORDONNEES.lon|Number|false|false|false|Longitude de la notice en WGS84|
 |POP_CONTIENT_GEOLOCALISATION|String|false|false|false||
 |POP_COORDINATES_POLYGON.type|String|false|false|false||
 |POP_COORDINATES_POLYGON.coordinates|Array|false|false|false||
@@ -358,10 +358,10 @@
 ## Mnr
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
-|PRODUCTEUR|String|false|false|false||
-|BASE|String|false|false|false||
-|CONTIENT_IMAGE|String|false|false|false||
-|REF|String|false|false|false||
+|PRODUCTEUR|String|false|false|false|Producteur de la donnée : Valeur MNR|
+|BASE|String|false|false|false|Nom de la base : Valeur Récupération artistique (MNR Rose-Valland)|
+|CONTIENT_IMAGE|String|false|false|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
+|REF|String|false|false|false|Référence unique de la notice|
 |POP_IMPORT|Array|false|false|false||
 |TOUT|String|false|false|false||
 |AUTR|Array|false|false|false||
@@ -498,15 +498,15 @@
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
 |PRODUCTEUR|String|false|false|false||
-|CONTIENT_IMAGE|String|false|false|false||
-|POP_COORDONNEES.lat|Number|false|false|false||
-|POP_COORDONNEES.lon|Number|false|false|false||
+|CONTIENT_IMAGE|String|false|false|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
+|POP_COORDONNEES.lat|Number|false|false|false|Latitude de la notice en WGS84|
+|POP_COORDONNEES.lon|Number|false|false|false|Longitude de la notice en WGS84|
 |POP_CONTIENT_GEOLOCALISATION|String|false|false|false||
 |POP_COORDINATES_POLYGON.type|String|false|false|false||
 |POP_COORDINATES_POLYGON.coordinates|Array|false|false|false||
-|BASE|String|false|false|false||
+|BASE|String|false|false|false|Nom de la base : Patrimoine mobilier (Palissy)|
 |MEMOIRE|Array|false|false|false||
-|REF|String|false|false|false||
+|REF|String|false|false|false|Référence unique de la notice|
 |POP_IMPORT|Array|false|false|false||
 |ACQU|String|false|false|false||
 |ADRS|String|false|false|false||

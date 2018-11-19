@@ -5,10 +5,29 @@ var getElasticInstance = require("../elasticsearch");
 const Schema = new mongoose.Schema(
   {
     PRODUCTEUR: { type: String, default: "" },
-    BASE: { type: String, default: "Photographies (Mémoire)" },
-    CONTIENT_IMAGE: { type: String, default: "" },
+    BASE: {
+      type: String,
+      default: "Photographies (Mémoire)",
+      description:
+        "Nom de la base : Photographies (Mémoire)",
+      master: "true"
+    },
+    CONTIENT_IMAGE: {
+      type: String,
+      default: "",
+      description:
+        "Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES",
+      master: "true"
+    },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],
-    REF: { type: String, unique: true, index: true, trim: true },
+    REF: {
+      type: String,
+      unique: true,
+      index: true,
+      trim: true,
+      description: "Référence unique de la notice",
+      master: "false"
+    },
     TOUT: { type: String, default: "" },
     ADRESSE: { type: String, default: "" },
     AUTOEU: { type: String, default: "" },
