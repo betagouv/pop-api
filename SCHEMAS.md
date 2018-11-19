@@ -14,14 +14,14 @@
 ## Joconde
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
-|PRODUCTEUR|String|false|false|false||
-|BASE|String|false|false|false||
-|CONTIENT_IMAGE|String|false|false|false||
-|POP_COORDONNEES.lat|Number|false|false|false||
-|POP_COORDONNEES.lon|Number|false|false|false||
-|REF|String|false|false|false||
+|PRODUCTEUR|String|false|false|false|Producteur de la donnée|
+|BASE|String|false|false|false|Nom de la base|
+|CONTIENT_IMAGE|String|false|false|false|Champ permettant|
+|POP_COORDONNEES.lat|Number|false|false|false|Latitude de la notice en WGS84|
+|POP_COORDONNEES.lon|Number|false|false|false|Longitude de la notice en WGS84|
+|REF|String|false|false|false|Référence unique de la notice|
 |POP_IMPORT|Array|false|false|false||
-|REFMIS|String|false|false|false||
+|REFMIS|String|false|false|false|Référence de mise à jour (marque de la modification de la notice)|
 |ADPT|Array|false|false|false||
 |APPL|Array|false|false|false||
 |APTN|String|false|false|false||

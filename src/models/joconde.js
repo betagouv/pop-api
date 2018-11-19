@@ -6,19 +6,54 @@ const Museo = require("./museo");
 
 const Schema = new mongoose.Schema(
   {
-    PRODUCTEUR: { type: String, default: "MUSEE" },
+    PRODUCTEUR: {
+      type: String,
+      default: "MUSEE",
+      description: "Producteur de la donnée",
+      master: true
+    },
     BASE: {
       type: String,
-      default: "Collections des musées de France (Joconde)"
+      default: "Collections des musées de France (Joconde)",
+      description: "Nom de la base",
+      master: true
     },
-    CONTIENT_IMAGE: { type: String, default: "" },
+    CONTIENT_IMAGE: {
+      type: String,
+      default: "",
+      description: "Champ permettant",
+      master: true
+    },
     POP_COORDONNEES: {
-      lat: { type: Number, default: 0 },
-      lon: { type: Number, default: 0 }
+      lat: {
+        type: Number,
+        default: 0,
+        description: "Latitude de la notice en WGS84",
+        master: true
+      },
+      lon: {
+        type: Number,
+        default: 0,
+        description: "Longitude de la notice en WGS84",
+        master: true
+      }
     },
-    REF: { type: String, unique: true, index: true, trim: true },
+    REF: {
+      type: String,
+      unique: true,
+      index: true,
+      trim: true,
+      description: "Référence unique de la notice",
+      master: false
+    },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],
-    REFMIS: { type: String, default: "" },
+    REFMIS: {
+      type: String,
+      default: "",
+      description:
+        "Référence de mise à jour (marque de la modification de la notice)",
+      master: false
+    },
     ADPT: { type: [String], default: [] },
     APPL: { type: [String], default: [] },
     APTN: { type: String, default: "" },
