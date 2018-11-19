@@ -10,7 +10,8 @@
     "deploy:prod": "yarn && eb deploy pop-api --profil POP",
     "deploy:staging": "yarn && eb deploy pop-api-staging --profil POP",
     "test": "jest",
-    "export-db-schemas": "node src/export-db-schemas"
+    "export-db-schemas": "node src/export-db-schemas",
+    "sitemap": "nodemon -r dotenv/config src/sitemap/sitemap.js"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "request": "^2.87.0",
+    "sitemap": "^2.1.0",
     "x2js": "^3.2.1",
     "xml2js": "^0.4.19"
   },
