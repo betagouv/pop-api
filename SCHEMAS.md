@@ -362,61 +362,61 @@
 |PRODUCTEUR|String|false|true|false|Producteur de la donnée : Valeur MNR|
 |BASE|String|false|true|false|Nom de la base : Valeur Récupération artistique (MNR Rose-Valland)|
 |CONTIENT_IMAGE|String|false|true|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
-|REF|String|false|false|false|Référence unique de la notice|
+|REF|String|false|true|false|Référence unique de la notice|
 |POP_IMPORT|Array|false|false|false||
-|TOUT|String|false|false|false||
-|AUTR|Array|false|false|false||
-|PAUT|String|false|false|false||
-|ATTR|String|false|false|false||
-|ECOL|String|false|false|false||
-|TITR|String|false|false|false||
-|ATIT|String|false|false|false||
-|PTIT|String|false|false|false||
-|DENO|Array|false|false|false||
-|DESC|String|false|false|false||
-|DOMN|Array|false|false|false||
-|LOCA|String|false|false|false||
-|INSC|String|false|false|false||
-|MARQ|String|false|false|false||
-|OBSE|String|false|false|false||
-|ETAT|String|false|false|false||
-|GENE|String|false|false|false||
-|PROV|String|false|false|false||
-|HIST|String|false|false|false||
-|HIST2|String|false|false|false||
-|HIST3|String|false|false|false||
-|HIST4|String|false|false|false||
-|HIST5|String|false|false|false||
-|HIST6|String|false|false|false||
-|SCLE|Array|false|false|false||
-|STYL|String|false|false|false||
-|MILL|String|false|false|false||
-|TECH|Array|false|false|false||
-|DIMS|Array|false|false|false||
-|VIDEO|Array|false|false|false||
-|INV|String|false|false|false||
-|EXPO|String|false|false|false||
-|BIBL|String|false|false|false||
-|AATT|String|false|false|false||
-|AUTI|String|false|false|false||
-|CATE|String|false|false|false||
-|CATE_DEPREC|String|false|false|false||
-|NOTE|String|false|false|false||
-|REDC|Array|false|false|false||
-|DREP|String|false|false|false||
-|PREP|String|false|false|false||
-|REPR|String|false|false|false||
-|SREP|String|false|false|false||
-|REFIM|String|false|false|false||
+|TOUT|String|false|true|false|[PAS AFFICHE]|
+|AUTR|Array|false|true|false|Auteur /exécutant / collecteur|
+|PAUT|String|false|true|false|Precisions auteur|
+|ATTR|String|false|true|false|Anciennes attributions|
+|ECOL|String|false|true|false|Ecole |
+|TITR|String|false|true|false|Titre |
+|ATIT|String|false|true|false|Ancien titre|
+|PTIT|String|false|true|false|Précision titre|
+|DENO|Array|false|true|false|Dénomination du bien|
+|DESC|String|false|true|false|Description |
+|DOMN|Array|false|true|false|Domaine (catégorie du bien)|
+|LOCA|String|false|true|false|Localisation |
+|INSC|String|false|true|false|Inscriptions |
+|MARQ|String|false|true|false|Marques |
+|OBSE|String|false|true|false|Observations |
+|ETAT|String|false|true|false|Etat de conservation|
+|GENE|String|false|true|false|Genèse |
+|PROV|String|false|true|false|Provenance |
+|HIST|String|false|true|false|Historique |
+|HIST2|String|false|true|false|[PAS AFFICHE]|
+|HIST3|String|false|true|false|[PAS AFFICHE]|
+|HIST4|String|false|true|false|[PAS AFFICHE]|
+|HIST5|String|false|true|false|[PAS AFFICHE]|
+|HIST6|String|false|true|false|[PAS AFFICHE]|
+|SCLE|Array|false|true|false|Siècle |
+|STYL|String|false|true|false|Style |
+|MILL|String|false|true|false|Millenaire |
+|TECH|Array|false|true|false|Technique |
+|DIMS|Array|false|true|false|Dimensions |
+|VIDEO|Array|false|true|false|[PAS AFFICHE]|
+|INV|String|false|true|false|N°Inventaire, ancien(s) numéros(s), autres numéros, N° de dépôt|
+|EXPO|String|false|true|false|Exposition |
+|BIBL|String|false|true|false|Bibliographie |
+|AATT|String|false|true|false|Ancienne attribution|
+|AUTI|String|false|true|false|Autre titre|
+|CATE|String|false|true|false|Catégorie |
+|CATE_DEPREC|String|false|true|false|[PAS AFFICHE]|
+|NOTE|String|false|true|false|Notes |
+|REDC|Array|false|true|false|Rédacteurs |
+|DREP|String|false|true|false|Date de la représentation|
+|PREP|String|false|true|false|Précisions sur la représentation|
+|REPR|String|false|true|false|Représentation |
+|SREP|String|false|true|false|Sujet de la représentation (source littéraire ou musicale) |
+|REFIM|String|false|true|false|Adresses images jointes générique (actuellement non utilisé)|
 |DMAJ|String|false|true|false|Date de la dernière mise à jour|
 |DMIS|String|false|true|false|Date de la création POP/Mistral|
-|AFFE|String|false|false|false||
-|NUMS|String|false|false|false||
-|SUITE|String|false|false|false||
-|COMM|String|false|false|false||
-|NOTE2|String|false|false|false||
-|RESUME|String|false|false|false||
-|PHOT|String|false|false|false||
+|AFFE|String|false|true|false|Etablissement affectataire qui existe dans d’autres bases|
+|NUMS|String|false|true|false|Autres numéros|
+|SUITE|String|false|true|false|OEuvres liées, ensemble|
+|COMM|String|false|true|false|Commentaire |
+|NOTE2|String|false|true|false|[PAS AFFICHE]|
+|RESUME|String|false|true|false|Résumé |
+|PHOT|String|false|true|false|Droits de copie photo |
 |_id|ObjectID|false|false|false||
 |__v|Number|false|false|false||
 ## Museo
