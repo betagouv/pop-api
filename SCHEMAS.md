@@ -230,7 +230,7 @@
 |Name|Type|Required|Master|Opendata|Description|
 |----|----|--------|------|--------|-----------|
 |REF|String|false|false|false|Référence unique de la notice|
-|PRODUCTEUR|String|false|false|false||
+### |PRODUCTEUR|String|false|false|false||
 |BASE|String|false|true|false|Nom de la base : Patrimoine architectural (Mérimée)|
 |CONTIENT_IMAGE|String|false|true|false|Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES|
 |MEMOIRE|Array|false|false|false||
