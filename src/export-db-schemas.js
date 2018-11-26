@@ -42,12 +42,14 @@ fs.writeFileSync(
             path.opendata ? "true" : "false"
           ];
           return [
-          `### ${path.name}`,
-          path.description,
-          `|Type|Required|Master|Opendata|`,
-          `|----|--------|------|--------|`,
-          `|${ elements.join("|") }|`
-        ].join("\n");
+            `### ${path.name}`,
+            path.description,
+            "",
+            `|Type|Required|Master|Opendata|`,
+            `|----|--------|------|--------|`,
+            `|${elements.join("|")}|`,
+            ""
+          ].join("\n");
         })
       ].join("\n");
     })
