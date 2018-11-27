@@ -34,7 +34,6 @@ function findCollection(ref = "") {
 function updateMerimeeOrPalissyNotice(memoire) {
   return new Promise(async (resolve, reject) => {
     if (!memoire.LBASE) {
-      console.log(`No link LBASE ${memoire.REF}`);
       resolve({ success: false, msg: `No link LBASE ${memoire.LBASE}` });
       return;
     }
