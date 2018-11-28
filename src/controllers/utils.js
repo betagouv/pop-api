@@ -3,8 +3,9 @@ const AWS = require("aws-sdk");
 const { s3Bucket } = require("./../config.js");
 const { capture } = require("./../sentry.js");
 
-
 const proj4 = require('proj4')
+
+
 //https://epsg.io/27572
 proj4.defs("lambert0", "+proj=lcc +lat_1=46.8 +lat_0=46.8 +lon_0=0 +k_0=0.99987742 +x_0=600000 +y_0=200000 +a=6378249.2 +b=6356515 +towgs84=-168,-60,320,0,0,0,0 +pm=paris +units=m +no_defs");
 //https://epsg.io/27571
@@ -22,58 +23,55 @@ proj4.defs("gauss laborde", "+proj=tmerc +lat_0=-21.11666666666667 +lon_0=55.533
 //https://epsg.io/32630
 proj4.defs("mtu", "+proj=utm +zone=30 +datum=WGS84 +units=m +no_defs");
 
-function lambertToWGS84(xy, zone){
+function lambertToWGS84(xy, zone) {
   if (!xy) {
-    return null
+    return { lat: 0, lon: 0 };
   }
   if (!zone) {
-    return null
+    return { lat: 0, lon: 0 };
   }
 
-  const coords = xy.split(';').map((e) => parseFloat(e.trim()));
+  const coords = xy.split(";").map(e => parseFloat(e.trim()));
 
   if (coords.length !== 2 || isNaN(coords[0]) || isNaN(coords[1])) {
-    console.log('GEOLOC', REF, 'GEOLOC is not properly formated', xy)
-    return null
+    console.log("GEOLOC", REF, "GEOLOC is not properly formated", xy);
+    return { lat: 0, lon: 0 };
   }
 
   switch (zone.toLowerCase()) {
-    case 'lambert0': {
-      const c = proj4('lambert0', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "lambert0": {
+      const c = proj4("lambert0", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
-    case 'lambert1': {
-      const c = proj4('lambert1', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "lambert1": {
+      const c = proj4("lambert1", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
-    case 'lambert2': {
-      const c = proj4('lambert2', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "lambert2": {
+      const c = proj4("lambert2", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
-    case 'lambert3': {
-      const c = proj4('lambert3', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "lambert3": {
+      const c = proj4("lambert3", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
-    case 'lambert4': {
-      const c = proj4('lambert4', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "lambert4": {
+      const c = proj4("lambert4", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
-    case 'gauss laborde': {
-      const c = proj4('gauss laborde', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "gauss laborde": {
+      const c = proj4("gauss laborde", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
-    case 'lambert93': {
-      const c = proj4('lambert93', 'WGS84', [coords[0], coords[1]]);
-      return [c[1], c[0]];
+    case "lambert93": {
+      const c = proj4("lambert93", "WGS84", [coords[0], coords[1]]);
+      return { lat: c[1], lon: c[0] };
     }
     default:
-      console.log('GEOLOC', REF, `Cant find zone ${zone} `, xy)
-      return null
+      console.log("GEOLOC", REF, `Cant find zone ${zone} `, xy);
+      return { lat: 0, lon: 0 };
   }
 }
-
-
-
 
 // Surement pas besoin de l'écrire sur le disque ...
 function uploadFile(path, file) {
@@ -146,9 +144,6 @@ function getNewId(object, prefix, dpt) {
   });
 }
 
-
-
-
 function checkESIndex(doc) {
   doc.on("es-indexed", (err, res) => {
     if (err) capture(err);
@@ -193,6 +188,21 @@ function formattedNow() {
     ("0" + now.getDate()).slice(-2));
 }
 
+function enrichBeforeSave(notice) {
+  notice.CONTIENT_IMAGE =
+    notice.MEMOIRE && notice.MEMOIRE.length ? "oui" : "non";
+  if (notice.COOR && notice.ZONE) {
+    notice.POP_COORDONNEES = lambertToWGS84(notice.COOR, notice.ZONE);
+  }
+  notice.POP_CONTIENT_GEOLOCALISATION =
+    notice.POP_COORDONNEES &&
+    notice.POP_COORDONNEES.lat &&
+    notice.POP_COORDONNEES.lat !== 0
+      ? "oui"
+      : "non";
+}
+
+
 module.exports = {
   uploadFile,
   deleteFile,
@@ -200,5 +210,5 @@ module.exports = {
   getNewId,
   checkESIndex,
   updateNotice,
-  lambertToWGS84
+  enrichBeforeSave
 };
