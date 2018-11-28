@@ -35,15 +35,14 @@ function getMerimeeOrPalissyNotice(memoire) {
   return new Promise(async (resolve, reject) => {
     if (!memoire.LBASE) {
       console.log(`No link LBASE ${memoire.REF}`);
-      resolve({ success: false, msg: `No link LBASE ${memoire.LBASE}` });
+      resolve(null);
       return;
     }
 
     const collection = findCollection(memoire.LBASE);
-
     if (!collection) {
       console.log(`No collection ${memoire.LBASE}`);
-      resolve({ success: false, msg: `No collection ${memoire.LBASE}` });
+      reject();
       return;
     }
     const notice = await collection.findOne({ REF: memoire.LBASE });
@@ -53,8 +52,12 @@ function getMerimeeOrPalissyNotice(memoire) {
 
 function removeLinkedNotice(memoire) {
   return new Promise(async (resolve, reject) => {
-    const notice = await getMerimeeOrPalissyNotice(memoire);
     try {
+      const notice = await getMerimeeOrPalissyNotice(memoire);
+      if (!notice) {
+        resolve();
+        return;
+      }
       await notice.collection.updateOne(
         { _id: notice._id },
         { $pull: { MEMOIRE: { ref: memoire.REF } } }
@@ -62,6 +65,7 @@ function removeLinkedNotice(memoire) {
       resolve();
     } catch (e) {
       console.log(e);
+      reject();
     }
   });
 }
