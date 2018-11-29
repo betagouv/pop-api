@@ -39,7 +39,6 @@
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "elasticsearch": "^14.2.2",
-    "event-stream": "3.3.4",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
     "generate-password": "^1.4.0",
