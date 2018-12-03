@@ -12,7 +12,8 @@ const {
   deleteFile,
   formattedNow,
   checkESIndex,
-  updateNotice
+  updateNotice,
+  enrichBeforeSave
 } = require("./utils");
 
 router.put(
@@ -36,14 +37,17 @@ router.put(
         )
       ];
 
-      //Update IMPORT ID
+      // Update IMPORT ID
       if (notice.POP_IMPORT.length) {
         const id = notice.POP_IMPORT[0];
         delete notice.POP_IMPORT;
         notice.$push = { POP_IMPORT: mongoose.Types.ObjectId(id) };
       }
 
-      //Update Notice
+      // Add generate fields
+      enrichBeforeSave(notice);
+
+      // Update Notice
       arr.push(updateNotice(Joconde, ref, notice));
 
       await Promise.all(arr);
@@ -73,9 +77,12 @@ router.post(
       );
     }
 
+    // Add generate fields
+    enrichBeforeSave(notice);
+
     const obj = new Joconde(notice);
 
-    //send error if obj is not well sync with ES
+    // Send error if obj is not well sync with ES
     checkESIndex(obj);
 
     arr.push(obj.save());
