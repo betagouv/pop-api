@@ -31,22 +31,47 @@ function findCollection(ref = "") {
   }
 }
 
-function updateMerimeeOrPalissyNotice(memoire) {
+function getMerimeeOrPalissyNotice(memoire) {
   return new Promise(async (resolve, reject) => {
     if (!memoire.LBASE) {
-      resolve({ success: false, msg: `No link LBASE ${memoire.LBASE}` });
+      console.log(`No link LBASE ${memoire.REF}`);
+      resolve(null);
       return;
     }
 
     const collection = findCollection(memoire.LBASE);
-
     if (!collection) {
       console.log(`No collection ${memoire.LBASE}`);
-      resolve({ success: false, msg: `No collection ${memoire.LBASE}` });
+      reject();
       return;
     }
     const notice = await collection.findOne({ REF: memoire.LBASE });
+    resolve(notice);
+  });
+}
 
+function removeLinkedNotice(memoire) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const notice = await getMerimeeOrPalissyNotice(memoire);
+      if (!notice) {
+        resolve();
+        return;
+      }
+      await notice.collection.updateOne(
+        { _id: notice._id },
+        { $pull: { MEMOIRE: { ref: memoire.REF } } }
+      );
+      resolve();
+    } catch (e) {
+      console.log(e);
+      reject();
+    }
+  });
+}
+function updateLinkedNotice(memoire) {
+  return new Promise(async (resolve, reject) => {
+    const notice = getMerimeeOrPalissyNotice(memoire);
     if (!notice) {
       console.log(`No notice ${memoire.LBASE}`);
       resolve({ success: false, msg: `No notice ${memoire.LBASE}` });
@@ -100,7 +125,7 @@ router.put(
 
     arr.push(updateNotice(Memoire, ref, notice));
 
-    arr.push(updateMerimeeOrPalissyNotice(notice));
+    arr.push(updateLinkedNotice(notice));
 
     Promise.all(arr)
       .then(() => {
@@ -131,7 +156,7 @@ router.post(
       );
     }
 
-    arr.push(updateMerimeeOrPalissyNotice(notice));
+    arr.push(updateLinkedNotice(notice));
 
     const obj = new Memoire(notice);
 
@@ -186,6 +211,9 @@ router.delete(
           error: `Je ne trouve pas la notice memoire ${ref} à supprimer`
         });
       }
+
+      await removeLinkedNotice(doc);
+
       const arr = [deleteFile(doc.IMG), doc.remove()];
       await Promise.all(arr);
       return res.status(200).send({});
