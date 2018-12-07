@@ -12,8 +12,7 @@ const {
   deleteFile,
   formattedNow,
   checkESIndex,
-  updateNotice,
-  enrichBeforeSave
+  updateNotice
 } = require("./utils");
 
 function enrichBeforeSave(notice) {
@@ -84,9 +83,6 @@ router.post(
         )
       );
     }
-
-    // Add generate fields
-    enrichBeforeSave(notice);
 
     const obj = new Joconde(notice);
 
