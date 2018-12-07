@@ -636,15 +636,19 @@ Schema.plugin(mongoosastic, {
 });
 
 Schema.pre("save", function(next, done) {
-  this.CONTIENT_IMAGE = this.IMG ? "oui" : "non";
+  // Je laisse ca ici car normalement, le champs MUSEO ne change jamais. J'ai pas envi de faire une requete à chaque fois pour remettre les coordonnées
   if (this.MUSEO) {
     Museo.findOne({ REF: this.MUSEO }, (err, museo) => {
       if (!err && museo && museo.location && museo.location.lat) {
         this.POP_COORDONNEES = museo.location;
+        this.POP_CONTIENT_GEOLOCALISATION = "oui";
+      } else {
+        this.POP_CONTIENT_GEOLOCALISATION = "non";
       }
       next();
     });
   } else {
+    this.POP_CONTIENT_GEOLOCALISATION = "non";
     next();
   }
 });

@@ -16,6 +16,11 @@ const {
   enrichBeforeSave
 } = require("./utils");
 
+function enrichBeforeSave(notice) {
+  notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
+  notice.DMAJ = formattedNow();
+}
+
 router.put(
   "/:ref",
   passport.authenticate("jwt", { session: false }),
@@ -24,7 +29,7 @@ router.put(
     const ref = req.params.ref;
     const notice = JSON.parse(req.body.notice);
 
-    notice.DMAJ = formattedNow();
+    enrichBeforeSave(notice);
 
     try {
       const prevNotice = await Joconde.findOne({ REF: ref });
@@ -65,7 +70,10 @@ router.post(
   upload.any(),
   (req, res) => {
     const notice = JSON.parse(req.body.notice);
-    notice.DMIS = notice.DMAJ = formattedNow();
+
+    notice.DMIS = formattedNow();
+
+    enrichBeforeSave(notice);
 
     const arr = [];
     for (var i = 0; i < req.files.length; i++) {
