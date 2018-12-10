@@ -27,9 +27,14 @@ const models = fs
 fs.writeFileSync(
   path.join(__dirname, markdownPath + "/README.md"),
   `# POP SCHEMAS\n 
-  ${models.map(
-    model => `- [${model.name[0].toUpperCase() + model.name.slice(1)}] (/doc/${model.name})\n`
-  )}`
+  ${models
+    .map(
+      model =>
+        `- [${model.name[0].toUpperCase() + model.name.slice(1)}](/doc/${
+          model.name
+        })`
+    )
+    .join("\n")}`
 );
 
 for (let i = 0; i < models.length; i++) {
@@ -41,7 +46,9 @@ for (let i = 0; i < models.length; i++) {
 
   //SUMMARY
   for (let j = 0; j < model.paths.length; j++) {
-    arr.push(`- [${model.paths[j].name}](/doc/${model.name}.md#${model.paths[j].name})`);
+    arr.push(
+      `- [${model.paths[j].name}](/doc/${model.name}.md#${model.paths[j].name})`
+    );
   }
 
   arr.push(
