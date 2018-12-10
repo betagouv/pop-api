@@ -1,6 +1,6 @@
 # POP SCHEMAS thesaurus
 
-## arc
-## value
-## _id
-## __v
+[arc](https://www.google.com)
+[value](https://www.google.com)
+[_id](https://www.google.com)
+[__v](https://www.google.com)
