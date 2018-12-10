@@ -72,6 +72,7 @@ function populateMerimeeREFO(notice) {
   return new Promise(async (resolve, reject) => {
     if (!Array.isArray(notice.REFA)) {
       resolve();
+      return;
     }
     for (var i = 0; i < notice.REFA.length; i++) {
       const obj = await Merimee.findOne({ REF: notice.REFA[i] });
