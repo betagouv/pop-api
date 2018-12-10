@@ -44,6 +44,26 @@ for (let i = 0; i < models.length; i++) {
     arr.push(`[${model.paths[j].name}](https://www.google.com)\n`);
   }
 
+  arr.push(
+    ...model.paths.map(path => {
+      const elements = [
+        path.type,
+        path.required ? "true" : "false",
+        path.master ? "true" : "false",
+        path.opendata ? "true" : "false"
+      ];
+      return [
+        `### ${path.name}`,
+        path.description,
+        "",
+        `|Type|Required|Master|Opendata|`,
+        `|----|--------|------|--------|`,
+        `|${elements.join("|")}|`,
+        ""
+      ].join("\n");
+    })
+  );
+
   fs.writeFileSync(
     path.join(__dirname, `${markdownPath}/${model.name}.md`),
     arr.join("\n")
