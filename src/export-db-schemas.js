@@ -28,7 +28,7 @@ fs.writeFileSync(
   path.join(__dirname, markdownPath + "/README.md"),
   `# POP SCHEMAS\n 
   ${models.map(
-    model => `${model.name[0].toUpperCase() + model.name.slice(1)}\n`
+    model => `- [${model.name[0].toUpperCase() + model.name.slice(1)}] (/doc/${model.name})\n`
   )}`
 );
 
