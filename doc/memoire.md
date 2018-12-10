@@ -124,7 +124,19 @@
 - [_id](/doc/memoire.md#_id)
 - [__v](/doc/memoire.md#__v)
 ### PRODUCTEUR
-      Producteur de la donnée déterminé grâce à la référence :       IV=INV      OA=CAOA      MH=CRMH      AR=ARCH      AP=SDAP      Autre=SAP
+Producteur de la donnée déterminé grâce à la référence : 
+
+      IV=INV
+
+      OA=CAOA
+
+      MH=CRMH
+
+      AR=ARCH
+
+      AP=SDAP
+
+      Autre=SAP
 
 |Type|Required|Master|Opendata|
 |----|--------|------|--------|
