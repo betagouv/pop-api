@@ -32,7 +32,7 @@ fs.writeFileSync(
       model =>
         `- [${model.name[0].toUpperCase() + model.name.slice(1)}](/doc/${
           model.name
-        })`
+        }.md)`
     )
     .join("\n")}`
 );
