@@ -7,16 +7,52 @@ const Memoire = require("../models/memoire");
 const Merimee = require("../models/merimee");
 const Palissy = require("../models/palissy");
 const {
-  uploadFile,
   formattedNow,
   getNewId,
   checkESIndex,
   updateNotice,
-  enrichBeforeSave
+  lambertToWGS84
 } = require("./utils");
 
 const { capture } = require("./../sentry.js");
 const passport = require("passport");
+
+function transformBeforeUpdate(notice) {
+  notice.DMAJ = formattedNow();
+  notice.CONTIENT_IMAGE =
+    notice.MEMOIRE && notice.MEMOIRE.length ? "oui" : "non";
+  if (notice.COOR && notice.ZONE) {
+    notice.POP_COORDONNEES = lambertToWGS84(notice.COOR, notice.ZONE);
+  }
+  notice.POP_CONTIENT_GEOLOCALISATION =
+    notice.POP_COORDONNEES && notice.POP_COORDONNEES.lat ? "oui" : "non";
+}
+
+function transformBeforeCreate(notice) {
+  notice.DMAJ = notice.DMIS = formattedNow();
+  notice.CONTIENT_IMAGE =
+    notice.MEMOIRE && notice.MEMOIRE.length ? "oui" : "non";
+  if (notice.COOR && notice.ZONE) {
+    notice.POP_COORDONNEES = lambertToWGS84(notice.COOR, notice.ZONE);
+  }
+  notice.POP_CONTIENT_GEOLOCALISATION =
+    notice.POP_COORDONNEES && notice.POP_COORDONNEES.lat ? "oui" : "non";
+
+  switch (notice.REF.substring(0, 2)) {
+    case "IA":
+      notice.DISCIPLINE = notice.PRODUCTEUR = "Inventaire";
+      break;
+    case "PA":
+      notice.DISCIPLINE = notice.PRODUCTEUR = "Monuments Historiques";
+      break;
+    case "EA":
+      notice.DISCIPLINE = notice.PRODUCTEUR = "Architecture";
+      break;
+    default:
+      notice.DISCIPLINE = notice.PRODUCTEUR = "Null";
+      break;
+  }
+}
 
 function checkIfMemoireImageExist(notice) {
   return new Promise(async (resolve, reject) => {
@@ -79,7 +115,6 @@ router.put(
       const notice = JSON.parse(req.body.notice);
       const arr = await checkIfMemoireImageExist(notice);
       notice.MEMOIRE = arr;
-      notice.DMAJ = formattedNow(); //UPDATE MAJ DATE ( couldnt use hook ...)
 
       //Update IMPORT ID
       if (notice.POP_IMPORT.length) {
@@ -89,7 +124,7 @@ router.put(
       }
 
       //Add generate fields
-      enrichBeforeSave(notice);
+      transformBeforeUpdate(notice);
 
       await updateNotice(Palissy, ref, notice);
 
@@ -112,9 +147,8 @@ router.post(
       const arr = await checkIfMemoireImageExist(notice);
       await populateMerimeeREFO(notice);
       notice.MEMOIRE = arr;
-      notice.DMIS = notice.DMAJ = formattedNow();
       //Add generate fields
-      enrichBeforeSave(notice);
+      transformBeforeCreate(notice);
 
       const obj = new Palissy(notice);
       //send error if obj is not well sync with ES

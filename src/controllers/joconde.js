@@ -16,24 +16,31 @@ const {
   updateNotice
 } = require("./utils");
 
-function transformBeforeSave(notice) {
+function transformBeforeUpdate(notice) {
   notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
   notice.DMAJ = formattedNow();
 }
 
-async function transformBeforeCreate(notice) {
-  notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
-  notice.DMAJ = notice.DMIS = formattedNow();
-  
-  if (notice.MUSEO) {
-    const museo = await Museo.findOne({ REF: notice.MUSEO });
-    if (museo && museo.location && museo.location.lat) {
-      notice.POP_COORDONNEES = museo.location;
-      notice.POP_CONTIENT_GEOLOCALISATION = "oui";
-    } else {
-      notice.POP_CONTIENT_GEOLOCALISATION = "non";
+function transformBeforeCreate(notice) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
+      notice.DMAJ = notice.DMIS = formattedNow();
+
+      if (notice.MUSEO) {
+        const museo = await Museo.findOne({ REF: notice.MUSEO });
+        if (museo && museo.location && museo.location.lat) {
+          notice.POP_COORDONNEES = museo.location;
+          notice.POP_CONTIENT_GEOLOCALISATION = "oui";
+        } else {
+          notice.POP_CONTIENT_GEOLOCALISATION = "non";
+        }
+      }
+      resolve();
+    } catch (e) {
+      reject(e);
     }
-  }
+  });
 }
 
 router.put(
@@ -62,7 +69,7 @@ router.put(
         notice.$push = { POP_IMPORT: mongoose.Types.ObjectId(id) };
       }
 
-      transformBeforeSave(notice);
+      transformBeforeUpdate(notice);
 
       // Update Notice
       arr.push(updateNotice(Joconde, ref, notice));
@@ -80,36 +87,35 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   upload.any(),
-  (req, res) => {
-    const notice = JSON.parse(req.body.notice);
+  async (req, res) => {
+    try {
+      const notice = JSON.parse(req.body.notice);
 
-    const arr = [];
-    for (var i = 0; i < req.files.length; i++) {
-      arr.push(
-        uploadFile(
-          `joconde/${notice.REF}/${req.files[i].originalname}`,
-          req.files[i]
-        )
-      );
+      const arr = [];
+      for (var i = 0; i < req.files.length; i++) {
+        arr.push(
+          uploadFile(
+            `joconde/${notice.REF}/${req.files[i].originalname}`,
+            req.files[i]
+          )
+        );
+      }
+
+      await transformBeforeCreate(notice);
+
+      const obj = new Joconde(notice);
+
+      // Send error if obj is not well sync with ES
+      checkESIndex(obj);
+
+      arr.push(obj.save());
+
+      await Promise.all(arr);
+      res.send({ success: true, msg: "OK" });
+    } catch (e) {
+      capture(e);
+      res.sendStatus(500);
     }
-
-    await transformBeforeCreate(notice);
-
-    const obj = new Joconde(notice);
-
-    // Send error if obj is not well sync with ES
-    checkESIndex(obj);
-
-    arr.push(obj.save());
-
-    Promise.all(arr)
-      .then(() => {
-        res.send({ success: true, msg: "OK" });
-      })
-      .catch(e => {
-        capture(e);
-        res.sendStatus(500);
-      });
   }
 );
 
