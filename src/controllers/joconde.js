@@ -2,10 +2,11 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const mongoose = require("mongoose");
+const passport = require("passport");
 const upload = multer({ dest: "uploads/" });
 const Joconde = require("../models/joconde");
+const Museo = require("../models/museo");
 const { capture } = require("./../sentry.js");
-const passport = require("passport");
 
 const {
   uploadFile,
@@ -15,9 +16,24 @@ const {
   updateNotice
 } = require("./utils");
 
-function enrichBeforeSave(notice) {
+function transformBeforeSave(notice) {
   notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
   notice.DMAJ = formattedNow();
+}
+
+async function transformBeforeCreate(notice) {
+  notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
+  notice.DMAJ = notice.DMIS = formattedNow();
+  
+  if (notice.MUSEO) {
+    const museo = await Museo.findOne({ REF: notice.MUSEO });
+    if (museo && museo.location && museo.location.lat) {
+      notice.POP_COORDONNEES = museo.location;
+      notice.POP_CONTIENT_GEOLOCALISATION = "oui";
+    } else {
+      notice.POP_CONTIENT_GEOLOCALISATION = "non";
+    }
+  }
 }
 
 router.put(
@@ -27,8 +43,6 @@ router.put(
   async (req, res) => {
     const ref = req.params.ref;
     const notice = JSON.parse(req.body.notice);
-
-    enrichBeforeSave(notice);
 
     try {
       const prevNotice = await Joconde.findOne({ REF: ref });
@@ -48,8 +62,7 @@ router.put(
         notice.$push = { POP_IMPORT: mongoose.Types.ObjectId(id) };
       }
 
-      // Add generate fields
-      enrichBeforeSave(notice);
+      transformBeforeSave(notice);
 
       // Update Notice
       arr.push(updateNotice(Joconde, ref, notice));
@@ -70,10 +83,6 @@ router.post(
   (req, res) => {
     const notice = JSON.parse(req.body.notice);
 
-    notice.DMIS = formattedNow();
-
-    enrichBeforeSave(notice);
-
     const arr = [];
     for (var i = 0; i < req.files.length; i++) {
       arr.push(
@@ -83,6 +92,8 @@ router.post(
         )
       );
     }
+
+    await transformBeforeCreate(notice);
 
     const obj = new Joconde(notice);
 

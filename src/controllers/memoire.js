@@ -31,7 +31,56 @@ function findCollection(ref = "") {
   }
 }
 
-function getMerimeeOrPalissyNotice(LBASE) {
+
+function transformBeforeSave(notice) {
+  notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
+  notice.DMAJ = formattedNow();
+}
+
+async function transformBeforeCreate(notice) {
+  notice.CONTIENT_IMAGE = notice.IMG ? "oui" : "non";
+  notice.DMAJ = notice.DMIS = formattedNow();
+  
+  if (notice.MUSEO) {
+    const museo = await Museo.findOne({ REF: notice.MUSEO });
+    if (museo && museo.location && museo.location.lat) {
+      notice.POP_COORDONNEES = museo.location;
+      notice.POP_CONTIENT_GEOLOCALISATION = "oui";
+    } else {
+      notice.POP_CONTIENT_GEOLOCALISATION = "non";
+    }
+  }
+}
+
+
+Schema.pre("save", function(next, done) {
+  switch (this.REF.substring(0, 2)) {
+    case "IV":
+      this.PRODUCTEUR = "INV";
+      break;
+    case "OA":
+      this.PRODUCTEUR = "CAOA";
+      break;
+    case "MH":
+      this.PRODUCTEUR = "CRMH";
+      break;
+    case "AR":
+      this.PRODUCTEUR = "ARCH";
+      break;
+    case "AP":
+      this.PRODUCTEUR = "SDAP";
+      break;
+    default:
+      this.PRODUCTEUR = "SAP";
+      break;
+  }
+
+  
+  next();
+});
+
+
+function getMerimeeOrPalissyNotice(memoire) {
   return new Promise(async (resolve, reject) => {
     const collection = findCollection(LBASE);
     if (!collection) {
