@@ -1,14 +1,14 @@
 # POP SCHEMAS Import
 
-[user](/doc/Import.md#user)
-[importedAt](/doc/Import.md#importedAt)
-[institution](/doc/Import.md#institution)
-[created](/doc/Import.md#created)
-[updated](/doc/Import.md#updated)
-[rejected](/doc/Import.md#rejected)
-[unChanged](/doc/Import.md#unChanged)
-[_id](/doc/Import.md#_id)
-[__v](/doc/Import.md#__v)
+- [user](/doc/Import.md#user)
+- [importedAt](/doc/Import.md#importedAt)
+- [institution](/doc/Import.md#institution)
+- [created](/doc/Import.md#created)
+- [updated](/doc/Import.md#updated)
+- [rejected](/doc/Import.md#rejected)
+- [unChanged](/doc/Import.md#unChanged)
+- [_id](/doc/Import.md#_id)
+- [__v](/doc/Import.md#__v)
 ### user
 Identifiant de l'utilisateur à l'origine de l'import
 

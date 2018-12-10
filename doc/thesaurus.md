@@ -1,9 +1,9 @@
 # POP SCHEMAS thesaurus
 
-[arc](/doc/thesaurus.md#arc)
-[value](/doc/thesaurus.md#value)
-[_id](/doc/thesaurus.md#_id)
-[__v](/doc/thesaurus.md#__v)
+- [arc](/doc/thesaurus.md#arc)
+- [value](/doc/thesaurus.md#value)
+- [_id](/doc/thesaurus.md#_id)
+- [__v](/doc/thesaurus.md#__v)
 ### arc
 
 
