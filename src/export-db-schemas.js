@@ -41,7 +41,7 @@ for (let i = 0; i < models.length; i++) {
 
   //SUMMARY
   for (let j = 0; j < model.paths.length; j++) {
-    arr.push(`[${model.paths[j].name}](https://www.google.com)\n`);
+    arr.push(`[${model.paths[j].name}](/#${model.paths[j].name})`);
   }
 
   arr.push(
