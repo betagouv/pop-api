@@ -76,39 +76,3 @@ for (let i = 0; i < models.length; i++) {
     arr.join("\n")
   );
 }
-
-// // 2. Convert to markdown and write to file
-
-/*
-  fs.writeFileSync(
-    path.join(__dirname, `markdownPath/${models[i].name[0]}.md`  + "/README.md"),
-    // Page Title
-    `# POP SCHEMAS\n${models
-      // Write one "table" for each model
-      .map(model => {
-        return [
-          // Upper case title
-          `## ${model.name[0].toUpperCase() + model.name.slice(1)}`,
-          // One block for each model property (title, description, info)
-          ...model.paths.map(path => {
-            const elements = [
-              path.type,
-              path.required ? "true" : "false",
-              path.master ? "true" : "false",
-              path.opendata ? "true" : "false"
-            ];
-            return [
-              `### ${path.name}`,
-              path.description,
-              "",
-              `|Type|Required|Master|Opendata|`,
-              `|----|--------|------|--------|`,
-              `|${elements.join("|")}|`,
-              ""
-            ].join("\n");
-          })
-        ].join("\n");
-      })
-      .join("\n")}`
-  );
-  */
