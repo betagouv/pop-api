@@ -159,7 +159,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Lien contact musée",
         master: true,
-        label: "Lien contact musée"
+        label: "Lien contact musée",
+        validation: "email"
       }
     },
     COOR: {

@@ -257,7 +257,7 @@ Lien contact musée
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|true|false||
+|String|false|true|false|email|
 
 ### COOR
 Coordinateur

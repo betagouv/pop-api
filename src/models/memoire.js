@@ -654,7 +654,11 @@ const Schema = new mongoose.Schema(
     CONTACT: {
       type: String,
       default: "",
-      documentation: { description: "Contact ", master: true }
+      documentation: {
+        description: "Contact ",
+        master: true,
+        validation: "email"
+      }
     },
     EMET: {
       type: String,

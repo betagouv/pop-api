@@ -1283,7 +1283,7 @@ Contact
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|true|false||
+|String|false|true|false|email|
 
 ### EMET
 Emetteur (nom) 

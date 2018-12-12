@@ -1358,7 +1358,7 @@ Contact
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|true|false||
+|String|false|true|false|email|
 
 ### IDAGR
 [PAS affiché]
