@@ -86,7 +86,7 @@ Référence unique de la notice
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|true|false||
+|String|true|true|false|Alphanumeric|
 
 ### POP_IMPORT
 

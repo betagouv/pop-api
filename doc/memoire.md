@@ -168,7 +168,7 @@ Référence unique de la notice
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|false|false||
+|String|true|false|false|Alphanumeric|
 
 ### TOUT
 Index global [Peut etre déprécié]
@@ -714,7 +714,7 @@ No phototype
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|false|false||
+|String|false|false|false|Alphanumeric|
 
 ### ANUMTI
 Ancien numéro du tirage
@@ -728,7 +728,7 @@ No tirage
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|false|false||
+|String|false|false|false|Alphanumeric|
 
 ### RENV
 Renvoi 

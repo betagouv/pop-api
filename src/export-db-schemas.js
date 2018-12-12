@@ -19,6 +19,9 @@ const models = fs
       master: v.options.documentation ? v.options.documentation.master : "",
       description: v.options.documentation
         ? v.options.documentation.description
+        : "",
+      validation: v.options.documentation
+        ? v.options.documentation.validation
         : ""
     }))
   }));
@@ -53,6 +56,7 @@ for (let i = 0; i < models.length; i++) {
 
   arr.push(
     ...model.paths.map(path => {
+      console.log(path);
       const elements = [
         path.type,
         path.required ? "true" : "false",

@@ -131,7 +131,7 @@ Référence unique de la notice
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
-|String|false|false|false||
+|String|true|false|false|Alphanumeric|
 
 ### PRODUCTEUR
 
