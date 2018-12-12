@@ -15,7 +15,8 @@ const Schema = new mongoose.Schema(
       AR=ARCH\n
       AP=SDAP\n
       Autre=SAP`,
-        master: true
+        master: true,
+        label: "Producteur"
       }
     },
     BASE: {
@@ -45,7 +46,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Référence unique de la notice",
         master: false,
-        validation: "Alphanumeric"
+        validation: "Alphanumeric",
+        label: "Référence"
       }
     },
     TOUT: {
@@ -59,91 +61,137 @@ const Schema = new mongoose.Schema(
     ADRESSE: {
       type: String,
       default: "",
-      documentation: { description: "Adresse ", master: false }
+      documentation: {
+        description: "Adresse",
+        master: false,
+        label: "Adresse"
+      }
     },
     AUTOEU: {
       type: String,
       default: "",
-      documentation: { description: "Auteur oeuvre représentée", master: false }
+      documentation: {
+        description: "Auteur oeuvre représentée",
+        master: false,
+        label: "Auteur oeuvre représentée"
+      }
     },
     AUTG: {
       type: String,
       default: "",
-      documentation: { description: "Auteur gravure", master: false }
+      documentation: {
+        description: "Auteur gravure",
+        master: false,
+        label: "Auteur gravure"
+      }
     },
     AUTP: {
       type: String,
       default: "",
-      documentation: { description: "Notice biblio", master: false }
+      documentation: {
+        description: "Auteur photo",
+        master: false,
+        label: "Auteur photo"
+      }
     },
     AUTOR: {
       type: String,
       default: "",
-      documentation: { description: "Auteur original", master: false }
+      documentation: {
+        description: "Auteur original",
+        master: false,
+        label: "Auteur original"
+      }
     },
     AUTTI: {
       type: String,
       default: "",
-      documentation: { description: "Auteur tirage", master: false }
+      documentation: {
+        description: "Auteur tirage",
+        master: false,
+        label: "Auteur tirage"
+      }
     },
     COM: {
       type: String,
       default: "",
-      documentation: { description: "Commune", master: false }
+      documentation: { description: "Commune", master: false, label: "Commune" }
     },
     DOM: {
       type: String,
       default: "",
       documentation: {
         description: "Domaine",
-        master: false
+        master: false,
+        label: "Domaine"
       }
     },
     EDIF: {
       type: String,
       default: "",
-      documentation: { description: "Nom édifice", master: false }
+      documentation: {
+        description: "Nom édifice",
+        master: false,
+        label: "Nom édifice"
+      }
     },
     EXPO: {
       type: String,
       default: "",
       documentation: {
-        description: "Référence d’exposition de l’image ",
+        description: "Référence d’exposition de l’image",
         master: false
       }
     },
     JDATPV: {
       type: String,
       default: "",
-      documentation: { description: "Justif date pv", master: false }
+      documentation: {
+        description: "Justif date pv",
+        master: false,
+        label: "Justif date pv"
+      }
     },
     LIEUCOR: {
       type: String,
       default: "",
-      documentation: { description: "Lieu cons orig.", master: false }
+      documentation: {
+        description: "Lieu cons orig.",
+        master: false,
+        label: "Lieu cons orig."
+      }
     },
     COTECOR: {
       type: String,
       default: "",
-      documentation: { description: "Cote cons orig. ", master: false }
+      documentation: {
+        description: "Cote cons orig.",
+        master: false,
+        label: "COTECOR"
+      }
     },
     LIEUCTI: {
       type: String,
       default: "",
-      documentation: { description: "Lieu cons tir. ", master: false }
+      documentation: {
+        description: "Lieu cons tir.",
+        master: false,
+        label: "Lieu cons tir."
+      }
     },
     COTECTI: {
       type: String,
       default: "",
       documentation: {
-        description: "Cote conservation du tirage ",
-        master: false
+        description: "Cote conservation du tirage",
+        master: false,
+        label: "Cote conservation du tirage"
       }
     },
     LIEUCP: {
       type: String,
       default: "",
-      documentation: { description: "Lieu cons pho.", master: false }
+      documentation: { description: "Lieu cons pho.", master: false, label: "" }
     },
     COTECP: {
       type: String,
@@ -156,69 +204,109 @@ const Schema = new mongoose.Schema(
     LEG: {
       type: String,
       default: "",
-      documentation: { description: "Légende ", master: false }
+      documentation: { description: "Légende", master: false, label: "Légende" }
     },
     OBJT: {
       type: String,
       default: "",
-      documentation: { description: "Nom objet", master: false }
+      documentation: {
+        description: "Nom objet",
+        master: false,
+        label: "Nom objet"
+      }
     },
     OBS: {
       type: String,
       default: "",
-      documentation: { description: "Obs phototype", master: false }
+      documentation: {
+        description: "Obs phototype",
+        master: false,
+        label: "Obs phototype"
+      }
     },
     OBSOR: {
       type: String,
       default: "",
-      documentation: { description: "Obs original", master: false }
+      documentation: {
+        description: "Obs original",
+        master: false,
+        label: "Obs original"
+      }
     },
     OBSTI: {
       type: String,
       default: "",
-      documentation: { description: "Obs tirage", master: false }
+      documentation: {
+        description: "Obs tirage",
+        master: false,
+        label: "Obs tirage"
+      }
     },
     PAYS: {
       type: String,
       default: "",
-      documentation: { description: "Pays   ", master: false }
+      documentation: { description: "Pays", master: false, label: "Pays" }
     },
     PUBLI: {
       type: String,
       default: "",
-      documentation: { description: "Publication ", master: false }
+      documentation: {
+        description: "Publication",
+        master: false,
+        label: "Publication"
+      }
     },
     TIREDE: {
       type: String,
       default: "",
-      documentation: { description: "Pub. photograph.", master: false }
+      documentation: {
+        description: "Pub. photograph.",
+        master: false,
+        label: "TIREDE"
+      }
     },
     ROLE: {
       type: String,
       default: "",
       documentation: {
-        documentation: { description: "Rôle joué ", master: false }
+        documentation: {
+          description: "Rôle joué",
+          master: false,
+          label: "Rôle joué"
+        }
       }
     },
     PRECOR: {
       type: String,
       default: "",
-      documentation: { description: "Préc original", master: false }
+      documentation: {
+        description: "Préc original",
+        master: false,
+        label: "Préc original"
+      }
     },
     SERIE: {
       type: String,
       default: "",
-      documentation: { description: "Titre série", master: false }
+      documentation: {
+        description: "Titre série",
+        master: false,
+        label: "Titre série"
+      }
     },
     THEATRE: {
       type: String,
       default: "",
-      documentation: { description: "", master: false }
+      documentation: {
+        description: "Nom de théâtre",
+        master: false,
+        label: "Nom de théâtre"
+      }
     },
     TITRE: {
       type: String,
       default: "",
-      documentation: { description: "", master: false }
+      documentation: { description: "TITRE", master: false, label: "TITRE" }
     },
     DMAJ: {
       type: String,
@@ -239,65 +327,102 @@ const Schema = new mongoose.Schema(
     IDPROD: {
       type: String,
       default: "",
-      documentation: { description: "Emetteur (nom) ", master: false }
+      documentation: {
+        description: "Emetteur (nom)",
+        master: false,
+        label: "Emetteur (nom)"
+      }
     },
     NUMCD: {
       type: String,
       default: "",
-      documentation: { description: "Numéro CD", master: false }
+      documentation: { description: "Numéro CD", master: false, label: "" }
     },
     NUMF: {
       type: String,
       default: "",
-      documentation: { description: "No de fond", master: false }
+      documentation: { description: "No de fond", master: false, label: "" }
     },
     INSEE: {
       type: String,
       default: "",
-      documentation: { description: "Code INSEE", master: false }
+      documentation: {
+        description: "Code INSEE",
+        master: false,
+        label: "Code INSEE"
+      }
     },
     NVD: {
       type: String,
-      default: " ",
-      documentation: { description: "vidéodisque", master: false }
+      default: "",
+      documentation: {
+        description: "vidéodisque",
+        master: false,
+        label: "vidéodisque"
+      }
     },
     MARQ: {
       type: String,
       default: "",
-      documentation: { description: "Ordre images", master: false }
+      documentation: {
+        description: "Ordre images",
+        master: false,
+        label: "Ordre images"
+      }
     },
     ACC: {
       type: String,
       default: "",
-      documentation: { description: "Accessoire pose", master: false }
+      documentation: {
+        description: "Accessoire pose",
+        master: false,
+        label: "Accessoire pose"
+      }
     },
     ACQU: {
       type: String,
-      default: " ",
-      documentation: { description: "Acquisition", master: false }
+      default: "",
+      documentation: {
+        description: "Acquisition",
+        master: false,
+        label: "Acquisition"
+      }
     },
     ADPHOT: {
       type: String,
       default: "",
-      documentation: { description: "Adresse personne ", master: false }
+      documentation: {
+        description: "Adresse personne",
+        master: false,
+        label: "Adresse personne"
+      }
     },
     AIRE: {
       type: String,
       default: "",
-      documentation: { description: "Aire d'étude", master: false }
+      documentation: {
+        description: "Aire d'étude",
+        master: false,
+        label: "Aire d'étude"
+      }
     },
     ANUMP: {
       type: String,
       default: "",
       documentation: {
         description: "Ancien numéro (ancienne cote du phototype)",
-        master: false
+        master: false,
+        label: "Ancien numéro (ancienne cote du phototype)"
       }
     },
     COPY: {
       type: String,
       default: "",
-      documentation: { description: "Crédit photo ", master: false }
+      documentation: {
+        description: "Crédit photo",
+        master: false,
+        label: "Crédit photo"
+      }
     },
     COULEUR: {
       type: String,
@@ -305,7 +430,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "Couleur [Devrait contenir oui ou non mais contient bcp plus . donnée à nettoyer]",
-        master: false
+        master: false,
+        label: "Couleur"
       }
     },
     COSTUME: {
@@ -313,78 +439,115 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Costume de la personne représentée",
-        master: false
+        master: false,
+        label: "Costume de la personne représentée"
       }
     },
     DATIMM: {
       type: String,
       default: "",
-      documentation: { description: "Date immatricul", master: false }
+      documentation: {
+        description: "Date immatricul",
+        master: false,
+        label: "Date immatricul"
+      }
     },
     DATOEU: {
       type: String,
       default: "",
-      documentation: { description: "Date oeuv année", master: false }
+      documentation: {
+        description: "Date oeuv année",
+        master: false,
+        label: "Date oeuv année"
+      }
     },
     DATPV: {
       type: String,
       default: "",
-      documentation: { description: "Date prise vue ", master: false }
+      documentation: {
+        description: "Date prise vue",
+        master: false,
+        label: "Date prise vue"
+      }
     },
     DATOR: {
       type: String,
       default: "",
-      documentation: { description: "Date original", master: false }
+      documentation: {
+        description: "Date original",
+        master: false,
+        label: "Date original"
+      }
     },
     DATTI: {
       type: String,
       default: "",
-      documentation: { description: "Date tirage", master: false }
+      documentation: { description: "Date tirage", master: false, label: "" }
     },
     DATG: {
       type: String,
       default: "",
-      documentation: { description: "Date gravure", master: false }
+      documentation: { description: "Date gravure", master: false, label: "" }
     },
     DATD: {
       type: String,
       default: "",
-      documentation: { description: "Date dessin", master: false }
+      documentation: { description: "Date dessin", master: false, label: "" }
     },
     DIFF: {
       type: String,
       default: "",
-      documentation: { description: "Droits diffusion", master: false }
+      documentation: {
+        description: "Droits diffusion",
+        master: false,
+        label: ""
+      }
     },
     DPT: {
       type: String,
       default: "",
-      documentation: { description: "Département ", master: false }
+      documentation: {
+        description: "Département",
+        master: false,
+        label: "Département"
+      }
     },
     EDIARCH: {
       type: String,
       default: "",
-      documentation: { description: "Interprétation", master: false }
+      documentation: { description: "Interprétation", master: false, label: "" }
     },
     ECH: {
       type: String,
       default: "",
-      documentation: { description: "Echelle ", master: false }
+      documentation: { description: "Echelle", master: false, label: "" }
     },
     FORMAT: {
       type: String,
       default: "",
-      documentation: { description: "Format phototype", master: false }
+      documentation: {
+        description: "Format phototype",
+        master: false,
+        label: "Format phototype"
+      }
     },
     FORMATOR: {
       type: String,
       default: "",
-      documentation: { description: "Format original", master: false }
+      documentation: {
+        description: "Format original",
+        master: false,
+        label: ""
+      }
     },
     FORMATTI: {
       type: String,
       default: "",
-      documentation: { description: "Format tirage", master: false }
+      documentation: {
+        description: "Format tirage",
+        master: false,
+        label: "Format tirage"
+      }
     },
     LBASE: {
       type: [String],
@@ -393,97 +556,155 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "LBASE contient la référence vers la notice Palissy ou Mérimée contenant l'image",
-        master: false
+        master: false,
+        label: "LBASE"
       }
     },
     WEB: {
       type: String,
       default: "",
-      documentation: { description: "Accès Mémoire", master: false }
+      documentation: { description: "Accès Mémoire", master: false, label: "" }
     },
     LIB: {
       type: String,
       default: "",
-      documentation: { description: "Mots candidats", master: false }
+      documentation: {
+        description: "Mots candidats",
+        master: false,
+        label: "Mots candidats"
+      }
     },
     LOCA: {
       type: String,
       default: "",
-      documentation: { description: "Localisation ", master: false }
+      documentation: {
+        description: "Localisation",
+        master: false,
+        label: "Localisation"
+      }
     },
     LIEUORIG: {
       type: String,
       default: "",
-      documentation: { description: "Lieu de dépôt", master: false }
+      documentation: {
+        description: "Lieu de dépôt",
+        master: false,
+        label: "Lieu de dépôt"
+      }
     },
     MCGEO: {
       type: String,
       default: "",
-      documentation: { description: "Nom géographique", master: false }
+      documentation: {
+        description: "Nom géographique",
+        master: false,
+        label: "Nom géographique"
+      }
     },
     MCL: {
       type: String,
       default: "",
-      documentation: { description: "Mots clés", master: false }
+      documentation: {
+        description: "Mots clés",
+        master: false,
+        label: "Mots clés"
+      }
     },
     MENTIONS: {
       type: String,
       default: "",
-      documentation: { description: "Mentions photo", master: false }
+      documentation: {
+        description: "Mentions photo",
+        master: false,
+        label: "Mentions photo"
+      }
     },
     MENTOR: {
       type: String,
       default: "",
-      documentation: { description: "Mentions orig", master: false }
+      documentation: {
+        description: "Mentions orig",
+        master: false,
+        label: "Mentions orig"
+      }
     },
     MENTTI: {
       type: String,
       default: "",
-      documentation: { description: "Mentions tirage", master: false }
+      documentation: {
+        description: "Mentions tirage",
+        master: false,
+        label: "Mentions tirage"
+      }
     },
     MCPER: {
       type: String,
       default: "",
-      documentation: { description: "Nom personne", master: false }
+      documentation: {
+        description: "Nom personne",
+        master: false,
+        label: "Nom personne"
+      }
     },
     VUECD: {
       type: String,
       default: "",
-      documentation: { description: "No vue CD", master: false }
+      documentation: { description: "No vue CD", master: false, label: "" }
     },
     NUMAUTP: {
       type: String,
       default: "",
-      documentation: { description: "Cote photographe", master: false }
+      documentation: {
+        description: "Cote photographe",
+        master: false,
+        label: "Cote photographe"
+      }
     },
     NUMCAF: {
       type: String,
       default: "",
-      documentation: { description: "No carte fenêtre", master: false }
+      documentation: {
+        description: "No carte fenêtre",
+        master: false,
+        label: "No carte fenêtre"
+      }
     },
     ANUMOR: {
       type: String,
       default: "",
-      documentation: { description: "No original(anc)", master: false }
+      documentation: {
+        description: "No original(anc)",
+        master: false,
+        label: "No original(anc)"
+      }
     },
     NUMOR: {
       type: String,
       default: "",
-      documentation: { description: "No original", master: false }
+      documentation: {
+        description: "No original",
+        master: false,
+        label: "No original"
+      }
     },
     NUMP: {
       type: String,
       default: "",
       documentation: {
-        description: "No phototype ",
+        description: "No phototype",
         master: false,
-        validation: "Alphanumeric"
+        validation: "Alphanumeric",
+        label: "No phototype"
       }
     },
     ANUMTI: {
       type: String,
       default: "",
-      documentation: { description: "Ancien numéro du tirage", master: false }
+      documentation: {
+        description: "Ancien numéro du tirage",
+        master: false,
+        label: "Ancien numéro du tirage"
+      }
     },
     NUMTI: {
       type: String,
@@ -491,56 +712,74 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "No tirage",
         master: false,
-        validation: "Alphanumeric"
+        validation: "Alphanumeric",
+        label: "No tirage"
       }
     },
     RENV: {
       type: String,
       default: "",
-      documentation: { description: "Renvoi ", master: false }
+      documentation: { description: "Renvoi", master: false, label: "Renvoi" }
     },
     REG: {
       type: String,
       default: "",
-      documentation: { description: "Région ", master: false }
+      documentation: { description: "Région", master: false, label: "Région" }
     },
     SENS: {
       type: String,
       default: "",
       documentation: {
-        description: "Sens [Qu'est ce que c'est ?] ",
-        master: false
+        description: "Sens [Qu'est ce que c'est ?]",
+        master: false,
+        label: "SENS"
       }
     },
     SCLE: {
       type: String,
       default: "",
-      documentation: { description: "Date oeuv siècle", master: false }
+      documentation: {
+        description: "Date oeuv siècle",
+        master: false,
+        label: "Date oeuv siècle"
+      }
     },
     SUP: {
       type: String,
       default: "",
-      documentation: { description: "Support ", master: false }
+      documentation: { description: "Support", master: false, label: "" }
     },
     TECH: {
       type: String,
       default: "",
-      documentation: { description: "Technique photo", master: false }
+      documentation: {
+        description: "Technique photo",
+        master: false,
+        label: "Technique photo"
+      }
     },
     TECHOR: {
       type: String,
       default: "",
-      documentation: { description: "Technique orig", master: false }
+      documentation: { description: "Technique orig", master: false, label: "" }
     },
     TECHTI: {
       type: String,
       default: "",
-      documentation: { description: "Technique tirage", master: false }
+      documentation: {
+        description: "Technique tirage",
+        master: false,
+        label: "Technique tirage"
+      }
     },
     TOILE: {
       type: String,
       default: "",
-      documentation: { description: "Toile de fond", master: false }
+      documentation: {
+        description: "Toile de fond",
+        master: false,
+        label: "Toile de fond"
+      }
     },
     TYP: {
       type: String,
@@ -553,109 +792,143 @@ const Schema = new mongoose.Schema(
     TYPDOC: {
       type: String,
       default: "",
-      documentation: { description: "phototype argentique", master: false }
+      documentation: {
+        description: "Catégorie de phototype",
+        master: false,
+        label: "Catégorie de phototype"
+      }
     },
     TYPEIMG: {
       type: String,
       default: "",
-      documentation: { description: "Type image num", master: false }
+      documentation: {
+        description: "Type image num",
+        master: false,
+        label: "Type image num"
+      }
     },
     TYPSUPP: {
       type: String,
       default: "",
-      documentation: { description: "Type support num ", master: false }
+      documentation: {
+        description: "Type support num",
+        master: false,
+        label: ""
+      }
     },
     VIDEO: {
       type: String,
       default: "",
       documentation: {
         description: "Vidéo [Semble être doublon avec IMG]",
-        master: false
+        master: false,
+        label: "Vidéo"
       }
     },
     LBASE2: {
       type: String,
       default: "",
       documentation: {
-        description: "Liens base  [Quelle différence avec LBASE?]",
-        master: false
+        description: "Liens base  [Semble déprécié]",
+        master: false,
+        label: "Liens base"
       }
     },
     LEG2: {
       type: String,
       default: "",
-      documentation: { description: "Légende thes. ", master: false }
+      documentation: { description: "Légende thes.", master: false, label: "" }
     },
     REFIM: {
       type: String,
       default: "",
-      documentation: { description: "Ref Image", master: false }
+      documentation: {
+        description: "Ref Image",
+        master: false,
+        label: "Ref Image"
+      }
     },
     REFIMG: {
       type: String,
       default: "",
-      documentation: { description: "Nom Image", master: false }
+      documentation: {
+        description: "Nom Image",
+        master: false,
+        label: "Nom Image"
+      }
     },
     MOSA: {
       type: String,
       default: "",
-      documentation: { description: "Mosaïques ", master: false }
+      documentation: { description: "Mosaïques", master: false, label: "" }
     },
     SITE: {
       type: String,
       default: "",
-      documentation: { description: "SITE", master: false }
+      documentation: { description: "SITE", master: false, label: "" }
     },
     NUMSITE: {
       type: String,
       default: "",
-      documentation: { description: "N° du site ", master: false }
+      documentation: { description: "N° du site", master: false, label: "" }
     },
     NUMOP: {
       type: String,
       default: "",
-      documentation: { description: "N° d'opération", master: false }
+      documentation: { description: "N° d'opération", master: false, label: "" }
     },
     CHRONO: {
       type: String,
       default: "",
-      documentation: { description: "Chronologie ", master: false }
+      documentation: {
+        description: "Chronologie",
+        master: false,
+        label: "Chronologie"
+      }
     },
     STRUCT: {
       type: String,
       default: "",
-      documentation: { description: "Structure ", master: false }
+      documentation: { description: "Structure", master: false, label: "" }
     },
     SUJET: {
       type: String,
       default: "",
-      documentation: { description: "Sujet ", master: false }
+      documentation: { description: "Sujet", master: false, label: "" }
     },
     TICO: {
       type: String,
       default: "",
-      documentation: { description: "Titre du dossier", master: false }
+      documentation: {
+        description: "Titre du dossier",
+        master: false,
+        label: ""
+      }
     },
     NUMI: {
       type: String,
       default: "",
-      documentation: { description: "Ident. support", master: false }
+      documentation: { description: "Ident. support", master: false, label: "" }
     },
     LIEU: {
       type: String,
       default: "",
-      documentation: { description: "Lieu-dit ", master: false }
+      documentation: { description: "Lieu-dit", master: false, label: "" }
     },
     ADRS: {
       type: String,
       default: "",
-      documentation: { description: "Adresse saisie", master: false }
+      documentation: {
+        description: "Adresse saisie",
+        master: false,
+        label: "Adresse saisie"
+      }
     },
     CONTACT: {
       type: String,
       default: "",
       documentation: {
-        description: "Contact ",
+        description: "Contact",
         master: true,
         validation: "email"
       }
@@ -663,17 +936,25 @@ const Schema = new mongoose.Schema(
     EMET: {
       type: String,
       default: "",
-      documentation: { description: "Emetteur (nom) ", master: false }
+      documentation: {
+        description: "Emetteur (code)",
+        master: false,
+        label: "Emetteur (code)"
+      }
     },
     NUM: {
       type: String,
       default: "",
-      documentation: { description: "N° support ", master: false }
+      documentation: { description: "N° support", master: false, label: "" }
     },
     IMG: {
       type: String,
       default: "",
-      documentation: { description: "Lien vers l'image", master: false }
+      documentation: {
+        description: "Lien vers l'image",
+        master: false,
+        label: ""
+      }
     },
     WCOM: {
       type: String,
@@ -686,12 +967,12 @@ const Schema = new mongoose.Schema(
     LIENS: {
       type: String,
       default: "",
-      documentation: { description: "Liens divers", master: false }
+      documentation: { description: "Liens divers", master: false, label: "" }
     },
     LAUTP: {
       type: String,
       default: "",
-      documentation: { description: "Notice biblio", master: false }
+      documentation: { description: "Notice biblio", master: false, label: "" }
     }
   },
   { collection: "memoire" }
