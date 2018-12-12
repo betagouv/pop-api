@@ -131,7 +131,7 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Auteur / exécutant / collecteur",
         master: false,
-        label: "Auteur / exécutant / collecteur",
+        label: "Auteur /exécutant / collecteur",
         thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T513"
       }
     },
