@@ -90,7 +90,11 @@ const Schema = new mongoose.Schema(
     DENO: {
       type: [String],
       default: [],
-      documentation: { description: "Dénomination du bien", master: true }
+      documentation: {
+        description: "Dénomination du bien",
+        master: true,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T96"
+      }
     },
     DESC: {
       type: String,

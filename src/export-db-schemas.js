@@ -22,6 +22,9 @@ const models = fs
         : "",
       validation: v.options.documentation
         ? v.options.documentation.validation
+        : "",
+      thesaurus: v.options.documentation
+        ? v.options.documentation.thesaurus
         : ""
     }))
   }));
@@ -56,7 +59,6 @@ for (let i = 0; i < models.length; i++) {
 
   arr.push(
     ...model.paths.map(path => {
-      console.log(path);
       const elements = [
         path.type,
         path.required ? "true" : "false",
@@ -67,6 +69,7 @@ for (let i = 0; i < models.length; i++) {
       return [
         `### ${path.name}`,
         path.description,
+        path.thesaurus ? `Thesaurus : ${path.thesaurus}` : "",
         "",
         `|Type|Required|Master|Opendata|Validation|`,
         `|----|--------|------|--------|------|`,

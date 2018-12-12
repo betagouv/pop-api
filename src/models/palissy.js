@@ -187,7 +187,11 @@ const Schema = new mongoose.Schema(
     DENO: {
       type: [String],
       default: [],
-      documentation: { description: "Dénomination ", master: false }
+      documentation: {
+        description: "Dénomination ",
+        master: false,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T69"
+      }
     },
     DENQ: {
       type: [String],
@@ -329,7 +333,11 @@ const Schema = new mongoose.Schema(
     IMPL: {
       type: String,
       default: "",
-      documentation: { description: "Milieu d'implantation", master: false }
+      documentation: {
+        description: "Milieu d'implantation",
+        master: false,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T12"
+      }
     },
     INSC: {
       type: [String],
@@ -355,7 +363,11 @@ const Schema = new mongoose.Schema(
     INTE: {
       type: String,
       default: "",
-      documentation: { description: "Intérêt de l'oeuvre", master: false }
+      documentation: {
+        description: "Intérêt de l'oeuvre",
+        master: false,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T33"
+      }
     },
     JDAT: {
       type: [String],
@@ -486,7 +498,11 @@ const Schema = new mongoose.Schema(
     PERS: {
       type: [String],
       default: [],
-      documentation: { description: "Personnalitées ", master: false }
+      documentation: {
+        description: "Personnalitées ",
+        master: false,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T6"
+      }
     },
     PETA: {
       type: String,
@@ -544,7 +560,8 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Nature de la protection MH",
-        master: false
+        master: false,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T10"
       }
     },
     REFA: {
@@ -610,7 +627,8 @@ const Schema = new mongoose.Schema(
       default: [],
       documentation: {
         description: "Datation des campagnes principales de construction ",
-        master: false
+        master: false,
+        thesaurus: "http://data.culture.fr/thesaurus/resource/ark:/67717/T17"
       }
     },
     SCLX: {

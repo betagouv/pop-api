@@ -15,11 +15,13 @@
 ### email
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false||
 
 ### institution
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -29,11 +31,13 @@
 ### nom
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### prenom
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -43,11 +47,13 @@
 ### group
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false||
 
 ### role
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -57,11 +63,13 @@
 ### password
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false||
 
 ### hasResetPassword
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -71,11 +79,13 @@
 ### lastConnectedAt
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Date|false|false|false||
 
 ### museofile
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -85,11 +95,13 @@
 ### _id
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |ObjectID|false|false|false||
 
 ### __v
+
 
 
 |Type|Required|Master|Opendata|Validation|

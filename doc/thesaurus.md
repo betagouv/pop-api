@@ -7,11 +7,13 @@
 ### arc
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### value
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -21,11 +23,13 @@
 ### _id
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |ObjectID|false|false|false||
 
 ### __v
+
 
 
 |Type|Required|Master|Opendata|Validation|

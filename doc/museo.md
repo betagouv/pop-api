@@ -76,11 +76,13 @@
 ### REF
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### TOUT
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -90,11 +92,13 @@
 ### ACCES
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ACTIV
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -104,11 +108,13 @@
 ### ADRESSE
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ADRL1_M
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -118,11 +124,13 @@
 ### AMIS
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### AN_CREAT
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -132,11 +140,13 @@
 ### ANNEE_FE
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ANNEXE
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -146,11 +156,13 @@
 ### ANTARIF
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ARTISTE
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -160,11 +172,13 @@
 ### ATOUT
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### CEDEX_AD
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -174,11 +188,13 @@
 ### COPY
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### CP_M
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -188,11 +204,13 @@
 ### CTRLTECH
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### DOMPAL
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -202,11 +220,13 @@
 ### DPT
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### DT_CREAT
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -216,11 +236,13 @@
 ### DT_MODIF
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### DT_SAISI
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -230,11 +252,13 @@
 ### GESTION
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### HIST
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -244,11 +268,13 @@
 ### INTERET
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ITI2_M
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -258,11 +284,13 @@
 ### ITI_M
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### JOCONDE
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -272,11 +300,13 @@
 ### LABEL
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### LEGS
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -286,11 +316,13 @@
 ### LIEU_M
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### MEL
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -300,11 +332,13 @@
 ### MONOPLUR
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### NB_AMI
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -314,11 +348,13 @@
 ### NOM_AMI
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### NOMANC
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -328,11 +364,13 @@
 ### NOMOFF
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### NOMUSAGE
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -342,11 +380,13 @@
 ### OBS_AMI
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### OBS_TOUR
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -356,11 +396,13 @@
 ### PHARE
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PROPBAT
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -370,11 +412,13 @@
 ### PROPCOLL
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PROT
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -384,11 +428,13 @@
 ### PUBLI
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### REGION
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -398,11 +444,13 @@
 ### REPCOLL
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### SERVICES
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -412,11 +460,13 @@
 ### SIGLE_M
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### STATUT
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -426,11 +476,13 @@
 ### SURFACES
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### TEL_M
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -440,11 +492,13 @@
 ### THEMES
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### URL_M2
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -454,11 +508,13 @@
 ### URL_M
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### VIDEO
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -468,11 +524,13 @@
 ### VILLE_M
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### RESP
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -482,11 +540,13 @@
 ### GRESP
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PSC
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -496,11 +556,13 @@
 ### DPSC
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### DMDF
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -510,11 +572,13 @@
 ### SPUB
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### INVR
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -524,11 +588,13 @@
 ### NUMER
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### LGN
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -538,11 +604,13 @@
 ### REST
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ACQU
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -552,11 +620,13 @@
 ### RECOL
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### location.lat
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -566,6 +636,7 @@
 ### location.lon
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Number|false|false|false||
@@ -573,11 +644,13 @@
 ### _id
 
 
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |ObjectID|false|false|false||
 
 ### __v
+
 
 
 |Type|Required|Master|Opendata|Validation|
