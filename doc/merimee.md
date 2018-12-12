@@ -248,7 +248,8 @@ Adresse
 
 ### AFFE
 Affectataire
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T97
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T97 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -272,7 +273,8 @@ Appellation et titre
 
 ### APRO
 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T98
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T98 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -352,7 +354,8 @@ Coordonnées Lambert (ou autres) multiples
 
 ### COPY
 CopyRight
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T21
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T21 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -360,7 +363,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T21
 
 ### COUV
 Type de la couverture
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T26
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T26 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -392,7 +396,8 @@ Domaines
 
 ### DENO
 Dénomination 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -408,7 +413,8 @@ Date d'enquête
 
 ### DEPL
 Partie déplacée
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T14
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T14 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -424,7 +430,8 @@ Commentaire description
 
 ### DIMS
 Dimensions
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T11
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T11 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -448,7 +455,8 @@ Date de la création POP/Mistral
 
 ### DOSS
 Dossier
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T13
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T13 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -480,7 +488,8 @@ Edifice de conservation
 
 ### ELEV
 Parti d’élévation extérieure
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T25
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T25 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -488,7 +497,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T25
 
 ### ENER
 Source de l'énergie
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T27
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T27 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -496,7 +506,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T27
 
 ### ESCA
 Emplacement, forme et structure de l’escalier 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T29
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T29 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -504,7 +515,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T29
 
 ### ETAG
 Vaisseau et étage
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T23
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T23 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -512,7 +524,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T23
 
 ### ETAT
 Etat de conservation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T30
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T30 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -520,7 +533,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T30
 
 ### ETUD
 Parties non étud
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T68
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T68 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -528,7 +542,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T68
 
 ### GENR
 Destinataire
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T197
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T197 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -552,7 +567,8 @@ Cours d'eau
 
 ### IMPL
 Milieu d'implantation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -568,7 +584,8 @@ Numéro INSEE de la commune
 
 ### INTE
 Intérêt de l'oeuvre
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|

@@ -371,7 +371,8 @@ Date de rédaction de la notice
 
 ### DENO
 Dénomination 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T69
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T69 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -579,7 +580,8 @@ Commentaire historique
 
 ### IMPL
 Milieu d'implantation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -611,7 +613,8 @@ Numéro INSEE de la commune
 
 ### INTE
 Intérêt de l'oeuvre
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -795,7 +798,8 @@ Précisions sur les dimensions
 
 ### PERS
 Personnalitées 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T6
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T6 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -859,7 +863,8 @@ Précision sur la représentation
 
 ### PROT
 Nature de la protection MH
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T10
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T10 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -939,7 +944,8 @@ Représentation
 
 ### SCLE
 Datation des campagnes principales de construction 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T17
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T17 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|

@@ -193,7 +193,8 @@ Anciennes attributions
 
 ### AUTR
 Auteur /exécutant / collecteur
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T513
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T513 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -273,7 +274,8 @@ Date de dépôt / changement d’affectation
 
 ### DECV
 Découverte / collecte / récolte (lieu de découverte / collecte / récolte) ; Type de site ; Méthode de découverte /collecte / récolte ; Date de découverte / collecte / récolte ; Découvreur / collecteur) 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T115
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T115 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -281,7 +283,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T115
 
 ### DENO
 Dénomination du bien
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T505
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T505 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -345,7 +348,8 @@ Date de la création POP/Mistral
 
 ### DOMN
 Domaine (catégorie du bien) 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T51
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T51 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -361,7 +365,8 @@ Date de la représentation
 
 ### ECOL
 Ecole 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T517
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T517 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -369,7 +374,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T517
 
 ### EPOQ
 Epoque /style / mouvement 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T93
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T93 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -393,7 +399,8 @@ Exposition
 
 ### GENE
 Genèse 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T506
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T506 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -433,7 +440,8 @@ Contient les images. Le plus souvent généré grâce à REFIM
 
 ### INSC
 Inscriptions 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T520
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T520 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -473,7 +481,8 @@ Appellation musée de France : logo : Champs ayant toujours la valeur 'Musée de
 
 ### LIEUX
 Lieu de création / d’exécution / d’utilisation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T84
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T84 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -481,7 +490,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T84
 
 ### LOCA
 Localisation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T515
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T515 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -585,7 +595,8 @@ Précisions sur la découverte / collecte / récolte
 
 ### PEOC
 Période de l’original copié
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -593,7 +604,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521
 
 ### PERI
 Période de création / exécution 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -601,7 +613,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521
 
 ### PERU
 Période d’utilisation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T521 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -673,7 +686,8 @@ Référence image : lien texte/ image : C'est un code qui permet de retrouver l'
 
 ### REPR
 Sujet représenté 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T523
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T523 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -689,7 +703,8 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T523
 
 ### SREP
 Source de la représentation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T523
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T523 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -705,7 +720,8 @@ Statut juridique (type de propriété ; mode d’acquisition ; institution propr
 
 ### TECH
 Matériaux et techniques
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T516
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T516 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
@@ -737,7 +753,8 @@ Titre de l'oeuvre
 
 ### UTIL
 Utilisation / Destination
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T86
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T86 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|

@@ -166,7 +166,8 @@ Précision titre
 
 ### DENO
 Dénomination du bien
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96
+Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96 
+
 
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
