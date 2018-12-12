@@ -12,7 +12,9 @@ const Schema = new mongoose.Schema(
       trim: true,
       documentation: {
         description: "Référence unique de la notice",
-        master: false
+        master: false,
+        validation: "Alphanumeric",
+        required: true
       }
     },
     PRODUCTEUR: {

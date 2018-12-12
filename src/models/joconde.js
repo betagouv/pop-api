@@ -73,7 +73,9 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Référence unique de la notice",
         master: false,
-        label: "Référence"
+        label: "Référence",
+        validation: "Alphanumeric",
+        required: true
       }
     },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],

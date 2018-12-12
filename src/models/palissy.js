@@ -62,7 +62,9 @@ const Schema = new mongoose.Schema(
       trim: true,
       documentation: {
         description: "Référence unique de la notice",
-        master: false
+        master: false,
+        validation: "Alphanumeric",
+        required: true
       }
     },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],
@@ -694,7 +696,6 @@ const Schema = new mongoose.Schema(
   },
   { collection: "palissy" }
 );
-
 
 Schema.plugin(mongoosePaginate);
 Schema.plugin(mongoosastic, {

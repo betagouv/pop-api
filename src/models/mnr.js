@@ -38,7 +38,9 @@ const Schema = new mongoose.Schema(
       trim: true,
       documentation: {
         description: "Référence unique de la notice",
-        master: true
+        master: true,
+        validation: "Alphanumeric",
+        required: true
       }
     },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],

@@ -43,7 +43,9 @@ const Schema = new mongoose.Schema(
       trim: true,
       documentation: {
         description: "Référence unique de la notice",
-        master: false
+        master: false,
+        validation: "Alphanumeric",
+        required: true
       }
     },
     TOUT: {
@@ -472,7 +474,11 @@ const Schema = new mongoose.Schema(
     NUMP: {
       type: String,
       default: "",
-      documentation: { description: "No phototype ", master: false }
+      documentation: {
+        description: "No phototype ",
+        master: false,
+        validation: "Alphanumeric"
+      }
     },
     ANUMTI: {
       type: String,
@@ -482,7 +488,11 @@ const Schema = new mongoose.Schema(
     NUMTI: {
       type: String,
       default: "",
-      documentation: { description: "No tirage", master: false }
+      documentation: {
+        description: "No tirage",
+        master: false,
+        validation: "Alphanumeric"
+      }
     },
     RENV: {
       type: String,

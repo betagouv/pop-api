@@ -57,14 +57,15 @@ for (let i = 0; i < models.length; i++) {
         path.type,
         path.required ? "true" : "false",
         path.master ? "true" : "false",
-        path.opendata ? "true" : "false"
+        path.opendata ? "true" : "false",
+        path.validation
       ];
       return [
         `### ${path.name}`,
         path.description,
         "",
-        `|Type|Required|Master|Opendata|`,
-        `|----|--------|------|--------|`,
+        `|Type|Required|Master|Opendata|Validation|`,
+        `|----|--------|------|--------|------|`,
         `|${elements.join("|")}|`,
         ""
       ].join("\n");
