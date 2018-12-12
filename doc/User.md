@@ -16,11 +16,15 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false||
 
 ### institution
+
+
 
 
 
@@ -32,11 +36,15 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### prenom
+
+
 
 
 
@@ -48,11 +56,15 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false||
 
 ### role
+
+
 
 
 
@@ -64,11 +76,15 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false||
 
 ### hasResetPassword
+
+
 
 
 
@@ -80,11 +96,15 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Date|false|false|false||
 
 ### museofile
+
+
 
 
 
@@ -96,11 +116,15 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |ObjectID|false|false|false||
 
 ### __v
+
+
 
 
 

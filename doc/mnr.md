@@ -64,12 +64,16 @@
 Producteur de la donnée : Valeur MNR
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### BASE
 Nom de la base : Valeur Récupération artistique (MNR Rose-Valland)
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -80,6 +84,8 @@ Nom de la base : Valeur Récupération artistique (MNR Rose-Valland)
 Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
@@ -88,11 +94,15 @@ Champ généré à chaque sauvegarde de la notice. Si notice contient des images
 Référence unique de la notice
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|true|false|Alphanumeric|
 
 ### POP_IMPORT
+
+
 
 
 
@@ -104,12 +114,16 @@ Référence unique de la notice
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### AUTR
 Auteur /exécutant / collecteur
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -120,12 +134,16 @@ Auteur /exécutant / collecteur
 Precisions auteur
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### ATTR
 Anciennes attributions
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -136,12 +154,16 @@ Anciennes attributions
 Ecole 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### TITR
 Titre 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -152,6 +174,8 @@ Titre
 Ancien titre
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
@@ -160,13 +184,18 @@ Ancien titre
 Précision titre
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### DENO
 Dénomination du bien
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -177,12 +206,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T96
 Description 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### DOMN
 Domaine (catégorie du bien)
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -193,12 +226,16 @@ Domaine (catégorie du bien)
 Localisation 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### INSC
 Inscriptions 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -209,12 +246,16 @@ Inscriptions
 Marques 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### OBSE
 Observations 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -225,12 +266,16 @@ Observations
 Etat de conservation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### GENE
 Genèse 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -241,12 +286,16 @@ Genèse
 Provenance 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### HIST
 Historique 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -257,12 +306,16 @@ Historique
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### HIST3
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -273,12 +326,16 @@ Historique
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### HIST5
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -289,12 +346,16 @@ Historique
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### SCLE
 Siècle 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -305,12 +366,16 @@ Siècle
 Style 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### MILL
 Millenaire 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -321,12 +386,16 @@ Millenaire
 Technique 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|true|false||
 
 ### DIMS
 Dimensions 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -337,12 +406,16 @@ Dimensions
 Champ qui contient les images
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|true|false||
 
 ### INV
 N°Inventaire, ancien(s) numéros(s), autres numéros, N° de dépôt
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -353,12 +426,16 @@ N°Inventaire, ancien(s) numéros(s), autres numéros, N° de dépôt
 Exposition 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### BIBL
 Bibliographie 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -369,12 +446,16 @@ Bibliographie
 Ancienne attribution
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### AUTI
 Autre titre
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -385,12 +466,16 @@ Autre titre
 Catégorie 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### CATE_DEPREC
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -401,12 +486,16 @@ Catégorie
 Notes 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### REDC
 Rédacteurs 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -417,12 +506,16 @@ Rédacteurs
 Date de la représentation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### PREP
 Précisions sur la représentation
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -433,12 +526,16 @@ Précisions sur la représentation
 Représentation 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### SREP
 Sujet de la représentation (source littéraire ou musicale) 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -449,12 +546,16 @@ Sujet de la représentation (source littéraire ou musicale)
 Adresses images jointes générique (actuellement non utilisé)
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### DMAJ
 Date de la dernière mise à jour
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -465,12 +566,16 @@ Date de la dernière mise à jour
 Date de la création POP/Mistral
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### AFFE
 Etablissement affectataire qui existe dans d’autres bases
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -481,12 +586,16 @@ Etablissement affectataire qui existe dans d’autres bases
 Autres numéros
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### SUITE
 OEuvres liées, ensemble
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -497,12 +606,16 @@ OEuvres liées, ensemble
 Commentaire 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### NOTE2
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -513,12 +626,16 @@ Commentaire
 Résumé 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### PHOT
 Droits de copie photo 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -529,11 +646,15 @@ Droits de copie photo
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |ObjectID|false|false|false||
 
 ### __v
+
+
 
 
 

@@ -68,8 +68,8 @@ for (let i = 0; i < models.length; i++) {
       ];
       return [
         `### ${path.name}`,
-        path.description,
-        path.thesaurus ? `Thesaurus : ${path.thesaurus} \n` : "",
+        path.description + "\n\n",
+        path.thesaurus ? `Thésaurus : ${path.thesaurus} \n\n` : "",
         "",
         `|Type|Required|Master|Opendata|Validation|`,
         `|----|--------|------|--------|------|`,

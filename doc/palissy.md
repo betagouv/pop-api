@@ -125,12 +125,16 @@
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### CONTIENT_IMAGE
 Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -141,6 +145,8 @@ Champ généré à chaque sauvegarde de la notice. Si notice contient des images
 Latitude de la notice en WGS84
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Number|false|true|false||
@@ -149,11 +155,15 @@ Latitude de la notice en WGS84
 Longitude de la notice en WGS84
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Number|false|true|false||
 
 ### POP_CONTIENT_GEOLOCALISATION
+
+
 
 
 
@@ -165,11 +175,15 @@ Longitude de la notice en WGS84
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### POP_COORDINATES_POLYGON.coordinates
+
+
 
 
 
@@ -181,11 +195,15 @@ Longitude de la notice en WGS84
 Nom de la base : Patrimoine mobilier (Palissy)
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### MEMOIRE
+
+
 
 
 
@@ -197,11 +215,15 @@ Nom de la base : Patrimoine mobilier (Palissy)
 Référence unique de la notice
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|true|false|false|Alphanumeric|
 
 ### POP_IMPORT
+
+
 
 
 
@@ -213,12 +235,16 @@ Référence unique de la notice
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ADRS
 Adresse 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -229,12 +255,16 @@ Adresse
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### AFIG
 Auteur(s) de la source figurée
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -245,12 +275,16 @@ Auteur(s) de la source figurée
 Aire d'étude
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### APPL
 Appellation et titre
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -261,12 +295,16 @@ Appellation et titre
 Nom de l’atelier, de la manufacture, de la fabrique ou de l’école 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### AUTP
 Auteurs phototype
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -277,12 +315,16 @@ Auteurs phototype
 Auteurs de l'oeuvre
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### BIBL
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -293,12 +335,16 @@ Auteurs de l'oeuvre
 Canton 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### CATE
 Catégorie technique
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -309,12 +355,16 @@ Catégorie technique
 Commune 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### COM2
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -325,12 +375,16 @@ Commune
 Contact 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### COOR
 Coordonnées Lambert (ou autres) d'un points 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -341,12 +395,16 @@ Coordonnées Lambert (ou autres) d'un points
 Coordonnées Lambert (ou autres) multiples 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### COPY
 CopyRight
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -357,6 +415,8 @@ CopyRight
 Datation en années
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
@@ -365,13 +425,18 @@ Datation en années
 Date de rédaction de la notice
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### DENO
 Dénomination 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T69 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T69 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -382,12 +447,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T69
 Date d'enquête
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### DEPL
 Partie déplacée
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -398,12 +467,16 @@ Partie déplacée
 Commentaire description
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### DIMS
 Dimensions 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -414,12 +487,16 @@ Dimensions
 Date de la dernière mise à jour
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### DMIS
 Date de la création POP/Mistral
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -430,12 +507,16 @@ Date de la création POP/Mistral
 Domaines 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### DOSADRS
 Dossier adresse
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -446,12 +527,16 @@ Dossier adresse
 Dossier 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### DOSURL
 Dossier URL
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -462,12 +547,16 @@ Dossier URL
 Dossier PDF 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|true|false||
 
 ### DPRO
 Date protection
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -478,12 +567,16 @@ Date protection
 Département 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### EDIF
 Edifice de conservation
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -494,12 +587,16 @@ Edifice de conservation
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### EMPL
 Emplacement de l’œuvre dans l’édifice
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -510,12 +607,16 @@ Emplacement de l’œuvre dans l’édifice
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ETAT
 Etat de conservation
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -526,12 +627,16 @@ Etat de conservation
 Parties non étud
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### EXEC
 Nom actuel ou historique du lieu d’exécution 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -542,12 +647,16 @@ Nom actuel ou historique du lieu d’exécution
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### HIST
 Commentaire historique
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -558,12 +667,16 @@ Commentaire historique
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### IMAGE
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -574,13 +687,18 @@ Commentaire historique
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### IMPL
 Milieu d'implantation
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -591,12 +709,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T12
 Inscriptions, marques, emblématique et poinçons
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### INSEE
 Numéro INSEE de la commune
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -607,13 +729,18 @@ Numéro INSEE de la commune
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### INTE
 Intérêt de l'oeuvre
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -624,12 +751,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T33
 Justification de la datation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### LBASE2
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -640,12 +771,16 @@ Justification de la datation
 Liens Divers
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### LIEU
 Lieu-dit 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -656,12 +791,16 @@ Lieu-dit
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### LOCA
 Localisation 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -672,12 +811,16 @@ Localisation
 Matériaux 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### MFICH
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -688,12 +831,16 @@ Matériaux
 Numéro de microfiche
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### MOSA
 Mosaïques 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -704,12 +851,16 @@ Mosaïques
 Numérotation artificielle
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### NINV
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -720,12 +871,16 @@ Numérotation artificielle
 Noms des rédacteurs de la notice et du dossier 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### NUMA
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -736,12 +891,16 @@ Noms des rédacteurs de la notice et du dossier
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### OBS
 Observations 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -752,12 +911,16 @@ Observations
 Origine de l’œuvre (lieu de provenance ou de destination)
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PAPP
 Préc. appart
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -768,12 +931,16 @@ Préc. appart
 Parties non étud
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### PART
 Parties constituantes
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -784,6 +951,8 @@ Parties constituantes
 Précision sur la dénomination
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
@@ -792,13 +961,18 @@ Précision sur la dénomination
 Précisions sur les dimensions
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PERS
 Personnalitées 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T6 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T6 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -809,12 +983,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T6
 Précisions sur l’état de conservation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PHOTO
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -825,12 +1003,16 @@ Précisions sur l’état de conservation
 Précisions sur les inscriptions, marques, emblématique et poinçons 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PINT
 Intérêt oeuvre
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -841,12 +1023,16 @@ Intérêt oeuvre
 Précision sur la localisation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PPRO
 Précisions sur la protection MH
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -857,13 +1043,18 @@ Précisions sur la protection MH
 Précision sur la représentation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### PROT
 Nature de la protection MH
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T10 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T10 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -874,12 +1065,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T10
 Référence de l'édifice de conservation
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### REFE
 Référence de l’ensemble ou de l'oeuvre
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -890,12 +1085,16 @@ Référence de l’ensemble ou de l'oeuvre
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### REFP
 Références des parties constituantes étudiées 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -906,12 +1105,16 @@ Références des parties constituantes étudiées
 Region 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### RENP
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -922,12 +1125,16 @@ Region
 N° de renvoi au domaine MH ou au domaine INVENTAIRE
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### REPR
 Représentation 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -938,13 +1145,18 @@ Représentation
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### SCLE
 Datation des campagnes principales de construction 
-Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T17 
+
+
+Thésaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T17 
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -955,12 +1167,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T17
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### SOUR
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -971,12 +1187,16 @@ Thesaurus : http://data.culture.fr/thesaurus/resource/ark:/67717/T17
 Stade de la création
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### STAT
 Statut de la propriété
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -987,12 +1207,16 @@ Statut de la propriété
 Structure et typologie
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |Array|false|false|false||
 
 ### THEM
 Thème 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -1003,12 +1227,16 @@ Thème
 Titre courant
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### TITR
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -1019,12 +1247,16 @@ Titre courant
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### VIDEO
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -1035,12 +1267,16 @@ Titre courant
 Objet(s) volé(s)
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### WADRS
 [PAS AFFICHE]
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -1051,12 +1287,16 @@ Objet(s) volé(s)
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### WEB
 Visite guidé 
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -1067,12 +1307,16 @@ Visite guidé
 [PAS AFFICHE]
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |String|false|false|false||
 
 ### ZONE
 Zone Lambert ou autre
+
+
 
 
 |Type|Required|Master|Opendata|Validation|
@@ -1083,11 +1327,15 @@ Zone Lambert ou autre
 
 
 
+
+
 |Type|Required|Master|Opendata|Validation|
 |----|--------|------|--------|------|
 |ObjectID|false|false|false||
 
 ### __v
+
+
 
 
 
