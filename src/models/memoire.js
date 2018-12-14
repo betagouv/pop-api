@@ -17,8 +17,6 @@ const Schema = new mongoose.Schema(
       Autre=SAP`,
         master: true,
         label: "Producteur"
-        master: true,
-        label: "PRODUCTEUR"
       }
     },
     BASE: {
