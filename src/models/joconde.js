@@ -30,7 +30,7 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description:
-          "Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES",
+          "Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champ sera oui', sinon 'non'. Ce champ est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES",
         master: true,
         label: "Contient une image"
       }
@@ -196,7 +196,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]  ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     DATION: {
@@ -205,7 +206,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]  ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     DDPT: {
@@ -263,7 +265,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     DIFFU: {
@@ -272,7 +275,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     DIMS: {
@@ -393,7 +397,8 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "[Je ne sais pas à quoi ce champ sert]  ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     IMG: {
@@ -431,7 +436,7 @@ const Schema = new mongoose.Schema(
       default: "Musée de France au sens de la loi n°2002-5 du 4 janvier 2002",
       documentation: {
         description:
-          "Appellation musée de France : logo : Champs ayant toujours la valeur 'Musée de France au sens de la loi n°2002-5 du 4 janvier 2002'",
+          "Appellation musée de France : logo : Champ ayant toujours la valeur 'Musée de France au sens de la loi n°2002-5 du 4 janvier 2002'",
         master: true,
         label: "Appellation musée de France"
       }
@@ -442,7 +447,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     LARC: {
@@ -451,7 +457,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     LIEUX: {
@@ -480,7 +487,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     LOCA3: {
@@ -489,7 +497,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     MILL: {
@@ -516,7 +525,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     MSGCOM: {
@@ -571,7 +581,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation]",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     PDEC: {
@@ -665,7 +676,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation] ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     REDA: {
@@ -703,7 +715,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : Pas affiché en production ni en consultation] ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     SREP: {
@@ -743,7 +756,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : A vérifier. Non présent en production] ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     TITR: {
@@ -761,7 +775,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "[Peut être déprécié : A vérifier. Non présent en production] ",
-        master: false
+        master: false,
+        deprecated: true
       }
     },
     UTIL: {

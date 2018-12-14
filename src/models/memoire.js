@@ -17,6 +17,8 @@ const Schema = new mongoose.Schema(
       Autre=SAP`,
         master: true,
         label: "Producteur"
+        master: true,
+        label: "PRODUCTEUR"
       }
     },
     BASE: {
@@ -55,7 +57,8 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Index global [Peut etre déprécié]",
-        master: false
+        master: false,
+        label: "Index global"
       }
     },
     ADRESSE: {
@@ -63,6 +66,11 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Adresse",
+        master: false,
+        label: "Adresse"
+      }
+      documentation: {
+        description: "Adresse ",
         master: false,
         label: "Adresse"
       }
@@ -139,8 +147,9 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Référence d’exposition de l’image",
-        master: false
+        description: "Référence d’exposition de l’image ",
+        master: false,
+        deprecated: true
       }
     },
     JDATPV: {
@@ -165,16 +174,16 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Cote cons orig.",
+        description: "Cote cons orig. ",
         master: false,
-        label: "COTECOR"
+        label: "Cote cons orig."
       }
     },
     LIEUCTI: {
       type: String,
       default: "",
       documentation: {
-        description: "Lieu cons tir.",
+        description: "Lieu cons tir. ",
         master: false,
         label: "Lieu cons tir."
       }
@@ -183,7 +192,7 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Cote conservation du tirage",
+        description: "Cote conservation du tirage ",
         master: false,
         label: "Cote conservation du tirage"
       }
@@ -191,20 +200,29 @@ const Schema = new mongoose.Schema(
     LIEUCP: {
       type: String,
       default: "",
-      documentation: { description: "Lieu cons pho.", master: false, label: "" }
+      documentation: {
+        description: "Lieu cons pho.",
+        master: false,
+        label: "Lieu cons pho."
+      }
     },
     COTECP: {
       type: String,
       default: "",
       documentation: {
         description: "Cote conservation du phototype",
-        master: false
+        master: false,
+        label: "COTECP"
       }
     },
     LEG: {
       type: String,
       default: "",
-      documentation: { description: "Légende", master: false, label: "Légende" }
+      documentation: {
+        description: "Légende ",
+        master: false,
+        label: "Légende"
+      }
     },
     OBJT: {
       type: String,
@@ -251,7 +269,7 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Publication",
+        description: "Publication ",
         master: false,
         label: "Publication"
       }
@@ -262,7 +280,7 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Pub. photograph.",
         master: false,
-        label: "TIREDE"
+        label: "Pub. photograph."
       }
     },
     ROLE: {
@@ -270,7 +288,7 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         documentation: {
-          description: "Rôle joué",
+          description: "Rôle joué ",
           master: false,
           label: "Rôle joué"
         }
@@ -306,14 +324,15 @@ const Schema = new mongoose.Schema(
     TITRE: {
       type: String,
       default: "",
-      documentation: { description: "TITRE", master: false, label: "TITRE" }
+      documentation: { description: "Titre", master: false, label: "Titre" }
     },
     DMAJ: {
       type: String,
       default: "",
       documentation: {
         description: "Date de la dernière mise à jour",
-        master: true
+        master: true,
+        label: "Date mise à jour "
       }
     },
     DMIS: {
@@ -321,14 +340,15 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Date de la création POP/Mistral",
-        master: true
+        master: true,
+        label: "Date Mistral"
       }
     },
     IDPROD: {
       type: String,
       default: "",
       documentation: {
-        description: "Emetteur (nom)",
+        description: "Emetteur (nom) ",
         master: false,
         label: "Emetteur (nom)"
       }
@@ -336,12 +356,20 @@ const Schema = new mongoose.Schema(
     NUMCD: {
       type: String,
       default: "",
-      documentation: { description: "Numéro CD", master: false, label: "" }
+      documentation: {
+        description: "Numéro CD",
+        master: false,
+        label: "Numéro CD"
+      }
     },
     NUMF: {
       type: String,
       default: "",
-      documentation: { description: "No de fond", master: false, label: "" }
+      documentation: {
+        description: "No de fond",
+        master: false,
+        label: "No de fond"
+      }
     },
     INSEE: {
       type: String,
@@ -354,7 +382,7 @@ const Schema = new mongoose.Schema(
     },
     NVD: {
       type: String,
-      default: "",
+      default: " ",
       documentation: {
         description: "vidéodisque",
         master: false,
@@ -381,7 +409,7 @@ const Schema = new mongoose.Schema(
     },
     ACQU: {
       type: String,
-      default: "",
+      default: " ",
       documentation: {
         description: "Acquisition",
         master: false,
@@ -392,7 +420,7 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Adresse personne",
+        description: "Adresse personne ",
         master: false,
         label: "Adresse personne"
       }
@@ -419,7 +447,7 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Crédit photo",
+        description: "Crédit photo ",
         master: false,
         label: "Crédit photo"
       }
@@ -465,7 +493,7 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Date prise vue",
+        description: "Date prise vue ",
         master: false,
         label: "Date prise vue"
       }
@@ -482,17 +510,29 @@ const Schema = new mongoose.Schema(
     DATTI: {
       type: String,
       default: "",
-      documentation: { description: "Date tirage", master: false, label: "" }
+      documentation: {
+        description: "Date tirage",
+        master: false,
+        label: "Date tirage "
+      }
     },
     DATG: {
       type: String,
       default: "",
-      documentation: { description: "Date gravure", master: false, label: "" }
+      documentation: {
+        description: "Date gravure",
+        master: false,
+        label: "Date gravure"
+      }
     },
     DATD: {
       type: String,
       default: "",
-      documentation: { description: "Date dessin", master: false, label: "" }
+      documentation: {
+        description: "Date dessin",
+        master: false,
+        label: "Date dessin"
+      }
     },
     DIFF: {
       type: String,
@@ -500,14 +540,14 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Droits diffusion",
         master: false,
-        label: ""
+        label: "Droits diffusion"
       }
     },
     DPT: {
       type: String,
       default: "",
       documentation: {
-        description: "Département",
+        description: "Département ",
         master: false,
         label: "Département"
       }
@@ -515,12 +555,20 @@ const Schema = new mongoose.Schema(
     EDIARCH: {
       type: String,
       default: "",
-      documentation: { description: "Interprétation", master: false, label: "" }
+      documentation: {
+        description: "Interprétation",
+        master: false,
+        label: "Interprétation"
+      }
     },
     ECH: {
       type: String,
       default: "",
-      documentation: { description: "Echelle", master: false, label: "" }
+      documentation: {
+        description: "Echelle ",
+        master: false,
+        label: "Echelle"
+      }
     },
     FORMAT: {
       type: String,
@@ -537,7 +585,7 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Format original",
         master: false,
-        label: ""
+        label: "Format original"
       }
     },
     FORMATTI: {
@@ -563,7 +611,11 @@ const Schema = new mongoose.Schema(
     WEB: {
       type: String,
       default: "",
-      documentation: { description: "Accès Mémoire", master: false, label: "" }
+      documentation: {
+        description: "Accès Mémoire",
+        master: false,
+        label: "Accès Mémoire"
+      }
     },
     LIB: {
       type: String,
@@ -578,7 +630,7 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Localisation",
+        description: "Localisation ",
         master: false,
         label: "Localisation"
       }
@@ -649,7 +701,11 @@ const Schema = new mongoose.Schema(
     VUECD: {
       type: String,
       default: "",
-      documentation: { description: "No vue CD", master: false, label: "" }
+      documentation: {
+        description: "No vue CD",
+        master: false,
+        label: "No vue CD"
+      }
     },
     NUMAUTP: {
       type: String,
@@ -719,7 +775,7 @@ const Schema = new mongoose.Schema(
     RENV: {
       type: String,
       default: "",
-      documentation: { description: "Renvoi", master: false, label: "Renvoi" }
+      documentation: { description: "Renvoi ", master: false, label: "Renvoi" }
     },
     REG: {
       type: String,
@@ -730,9 +786,9 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Sens [Qu'est ce que c'est ?]",
+        description: "Sens ",
         master: false,
-        label: "SENS"
+        label: "Sens"
       }
     },
     SCLE: {
@@ -747,7 +803,11 @@ const Schema = new mongoose.Schema(
     SUP: {
       type: String,
       default: "",
-      documentation: { description: "Support", master: false, label: "" }
+      documentation: {
+        description: "Support ",
+        master: false,
+        label: "Support"
+      }
     },
     TECH: {
       type: String,
@@ -761,7 +821,11 @@ const Schema = new mongoose.Schema(
     TECHOR: {
       type: String,
       default: "",
-      documentation: { description: "Technique orig", master: false, label: "" }
+      documentation: {
+        description: "Technique orig",
+        master: false,
+        label: "Technique orig"
+      }
     },
     TECHTI: {
       type: String,
@@ -776,9 +840,10 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Toile de fond",
+        description: "Toile de fond ",
         master: false,
-        label: "Toile de fond"
+        label: "Toile de fond",
+        deprecated: true
       }
     },
     TYP: {
@@ -786,7 +851,8 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Type  [Qu'est ce que c'est ?]",
-        master: false
+        master: false,
+        label: "Type"
       }
     },
     TYPDOC: {
@@ -811,9 +877,9 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Type support num",
+        description: "Type support num ",
         master: false,
-        label: ""
+        label: "Type support num "
       }
     },
     VIDEO: {
@@ -822,22 +888,27 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Vidéo [Semble être doublon avec IMG]",
         master: false,
-        label: "Vidéo"
+        label: "VIDEO"
       }
     },
     LBASE2: {
       type: String,
       default: "",
       documentation: {
-        description: "Liens base  [Semble déprécié]",
+        description: "Liens base  [Quelle différence avec LBASE?]",
         master: false,
-        label: "Liens base"
+        label: "Liens base ",
+        deprecated: true
       }
     },
     LEG2: {
       type: String,
       default: "",
-      documentation: { description: "Légende thes.", master: false, label: "" }
+      documentation: {
+        description: "Légende thes. ",
+        master: false,
+        label: "Légende thes."
+      }
     },
     REFIM: {
       type: String,
@@ -860,28 +931,40 @@ const Schema = new mongoose.Schema(
     MOSA: {
       type: String,
       default: "",
-      documentation: { description: "Mosaïques", master: false, label: "" }
+      documentation: {
+        description: "Mosaïques ",
+        master: false,
+        label: "Mosaïques"
+      }
     },
     SITE: {
       type: String,
       default: "",
-      documentation: { description: "SITE", master: false, label: "" }
+      documentation: { description: "SITE", master: false, label: "SITE" }
     },
     NUMSITE: {
       type: String,
       default: "",
-      documentation: { description: "N° du site", master: false, label: "" }
+      documentation: {
+        description: "N° du site ",
+        master: false,
+        label: "N° du site"
+      }
     },
     NUMOP: {
       type: String,
       default: "",
-      documentation: { description: "N° d'opération", master: false, label: "" }
+      documentation: {
+        description: "N° d'opération",
+        master: false,
+        label: "N° d'opération"
+      }
     },
     CHRONO: {
       type: String,
       default: "",
       documentation: {
-        description: "Chronologie",
+        description: "Chronologie ",
         master: false,
         label: "Chronologie"
       }
@@ -889,12 +972,16 @@ const Schema = new mongoose.Schema(
     STRUCT: {
       type: String,
       default: "",
-      documentation: { description: "Structure", master: false, label: "" }
+      documentation: {
+        description: "Structure ",
+        master: false,
+        label: "Structure"
+      }
     },
     SUJET: {
       type: String,
       default: "",
-      documentation: { description: "Sujet", master: false, label: "" }
+      documentation: { description: "Sujet ", master: false, label: "Sujet" }
     },
     TICO: {
       type: String,
@@ -902,18 +989,26 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Titre du dossier",
         master: false,
-        label: ""
+        label: "Titre du dossier"
       }
     },
     NUMI: {
       type: String,
       default: "",
-      documentation: { description: "Ident. support", master: false, label: "" }
+      documentation: {
+        description: "Ident. support",
+        master: false,
+        label: "Ident. support"
+      }
     },
     LIEU: {
       type: String,
       default: "",
-      documentation: { description: "Lieu-dit", master: false, label: "" }
+      documentation: {
+        description: "Lieu-dit ",
+        master: false,
+        label: "Lieu-dit"
+      }
     },
     ADRS: {
       type: String,
@@ -930,14 +1025,15 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Contact",
         master: true,
-        validation: "email"
+        validation: "email",
+        label: "CONTACT"
       }
     },
     EMET: {
       type: String,
       default: "",
       documentation: {
-        description: "Emetteur (code)",
+        description: "Emetteur (code) ",
         master: false,
         label: "Emetteur (code)"
       }
@@ -945,15 +1041,19 @@ const Schema = new mongoose.Schema(
     NUM: {
       type: String,
       default: "",
-      documentation: { description: "N° support", master: false, label: "" }
+      documentation: {
+        description: "N° support ",
+        master: false,
+        label: "N° support"
+      }
     },
     IMG: {
       type: String,
       default: "",
       documentation: {
-        description: "Lien vers l'image",
+        description: "Images",
         master: false,
-        label: ""
+        label: "Images"
       }
     },
     WCOM: {
@@ -961,18 +1061,27 @@ const Schema = new mongoose.Schema(
       default: "",
       documentation: {
         description: "Ville [Quelle difference avec COM ?]",
-        master: false
+        master: false,
+        label: "Ville"
       }
     },
     LIENS: {
       type: String,
       default: "",
-      documentation: { description: "Liens divers", master: false, label: "" }
+      documentation: {
+        description: "Liens divers",
+        master: false,
+        label: "Liens divers"
+      }
     },
     LAUTP: {
       type: String,
       default: "",
-      documentation: { description: "Notice biblio", master: false, label: "" }
+      documentation: {
+        description: "Notice biblio",
+        master: false,
+        label: "Notice biblio"
+      }
     }
   },
   { collection: "memoire" }
