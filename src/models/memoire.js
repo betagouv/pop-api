@@ -67,11 +67,6 @@ const Schema = new mongoose.Schema(
         master: false,
         label: "Adresse"
       }
-      documentation: {
-        description: "Adresse ",
-        master: false,
-        label: "Adresse"
-      }
     },
     AUTOEU: {
       type: String,
