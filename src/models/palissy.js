@@ -9,7 +9,12 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "Producteur  de la notice",
+        description: `
+        Producteur de la donnée défini selon l'algorithme suivant : 
+        IA = Inventaire
+        PA = Monuments Historiques
+        EA = Architecture
+        Autre = Null`,
         master: false,
         label: "Producteur"
       }
@@ -20,7 +25,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "Champ généré à chaque sauvegarde de la notice. Si notice contient des images, la valeur du champs sera oui', sinon 'non'. Ce champs est utilisé pour l'affichage de la phototèque mais pourrait être supprimé et remplacer par une fonction exist dans ES",
-        master: true
+        master: true,
+        generated: true
       }
     },
     POP_COORDONNEES: {
@@ -44,7 +50,12 @@ const Schema = new mongoose.Schema(
     POP_CONTIENT_GEOLOCALISATION: {
       type: String,
       enum: ["oui", "non"],
-      default: "non"
+      default: "non",
+      documentation: {
+        description: "Champs généré pour savoir si une géolocalisation existe",
+        master: true,
+        generated: true
+      }
     },
     POP_COORDINATES_POLYGON: {
       type: { type: String, enum: ["Polygon"], default: "Polygon" },
@@ -69,7 +80,8 @@ const Schema = new mongoose.Schema(
         description: "Référence unique de la notice",
         master: false,
         validation: "Alphanumeric",
-        label: "Référence notice"
+        label: "Référence notice",
+        generated: true
       }
     },
     POP_IMPORT: [{ type: mongoose.Schema.ObjectId, ref: "import" }],
@@ -308,7 +320,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Date de la dernière mise à jour",
         master: true,
-        label: "Date de la dernière mise à jour"
+        label: "Date de la dernière mise à jour",
+        generated: true
       }
     },
     DMIS: {
@@ -317,7 +330,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Date de la création POP/Mistral",
         master: true,
-        label: "Date de chargement dans la base "
+        label: "Date de chargement dans la base ",
+        generated: true
       }
     },
     DOMN: {

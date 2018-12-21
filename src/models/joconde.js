@@ -249,7 +249,7 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Dépôt / établissement dépositaire",
         master: false,
-        label: "dépot"
+        label: "Dépot"
       }
     },
     DESC: {

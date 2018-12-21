@@ -16,7 +16,7 @@ async function run() {
   // await generateSiteMapFile("memoire");
 
   const files = fs.readdirSync(`sitemap`);
-  const urls = files.map(e => `http://www.pop.culture.gouv.fr/sitemap/${e}`);
+  const urls = files.map(e => `https://www.pop.culture.gouv.fr/sitemap/${e}`);
   const smi = sm.buildSitemapIndex({
     urls
   });
@@ -31,9 +31,9 @@ setTimeout(() => {
 function generateGeneral() {
   return new Promise((resolve, reject) => {
     const urls = [];
-    urls.push(getURL("http://www.pop.culture.gouv.fr"));
+    urls.push(getURL("https://www.pop.culture.gouv.fr"));
     const sitemap = sm.createSitemap({
-      hostname: "http://www.pop.culture.gouv.fr",
+      hostname: "https://www.pop.culture.gouv.fr",
       urls
     });
     fs.writeFileSync(`./sitemap/sitemap_general.xml`, sitemap.toString());
@@ -75,7 +75,7 @@ function generateSiteMapFile(index, chunkSize = 1000) {
           urls.push(getURL(url));
         }
         var sitemap = sm.createSitemap({
-          hostname: "http://www.pop.culture.gouv.fr",
+          hostname: "https://www.pop.culture.gouv.fr",
           urls
         });
         const name = `./sitemap/sitemap_${index}_${counter}.xml`;

@@ -22,9 +22,16 @@ const Schema = new mongoose.Schema(
       type: String,
       default: "",
       documentation: {
-        description: "PRODUCTEUR",
+        description: `
+        Producteur de la donnée défini selon l'algorithme suivant : 
+        IA = Inventaire
+        PA = Monuments Historiques
+        EA = Architecture
+        Autre = Null
+        `,
         master: false,
-        label: "PRODUCTEUR"
+        label: "PRODUCTEUR",
+        generated: true
       }
     },
     BASE: {
@@ -70,7 +77,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description:
           "Champ généré à chaque sauvegarde de la notice. Si notice contient des une géolocalisation, la valeur du champs sera 'oui', sinon 'non'",
-        master: true
+        master: true,
+        generated: true
       }
     },
     POP_COORDINATES_POLYGON: {
@@ -322,7 +330,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Date de la dernière mise à jour",
         master: true,
-        label: "Date de la dernière mise à jour"
+        label: "Date de la dernière mise à jour",
+        generated: true
       }
     },
     DMIS: {
@@ -331,7 +340,8 @@ const Schema = new mongoose.Schema(
       documentation: {
         description: "Date de la création POP/Mistral",
         master: true,
-        label: "Date de chargement dans la base "
+        label: "Date de chargement dans la base ",
+        generated: true
       }
     },
     DOSS: {
