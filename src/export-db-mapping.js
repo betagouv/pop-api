@@ -19,6 +19,7 @@ const models = fs
         required: required,
         label: documentation ? documentation.label || "" : "",
         opendata: documentation ? documentation.opendata || "" : "",
+        generated: documentation ? documentation.generated || "" : "",
         description: documentation ? documentation.description || "" : "",
         validation: documentation ? documentation.validation || "" : "",
         thesaurus: documentation ? documentation.thesaurus || "" : ""
