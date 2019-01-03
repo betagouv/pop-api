@@ -43,12 +43,7 @@ function transformBeforeCreate(notice) {
 }
 
 function findProducteur(REF, IDPROD, EMET) {
-  if (
-    String(REF).startsWith("IVN") ||
-    String(REF).startsWith("IVR") ||
-    String(REF).startsWith("IVD") ||
-    String(REF).startsWith("IVC")
-  ) {
+  if (String(REF).startsWith("I")) {
     return "INV";
   } else if (String(REF).startsWith("OA")) {
     return "CAOA";
